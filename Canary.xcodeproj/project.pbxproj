@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E0EB6CB6212E4D37004910BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EB6CB5212E4D37004910BB /* AppDelegate.swift */; };
+		E0EB6CB8212E4D37004910BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EB6CB7212E4D37004910BB /* ViewController.swift */; };
+		E0EB6CBB212E4D37004910BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0EB6CB9212E4D37004910BB /* Main.storyboard */; };
+		E0EB6CBD212E4D3A004910BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0EB6CBC212E4D3A004910BB /* Assets.xcassets */; };
+		E0EB6CC0212E4D3A004910BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0EB6CBE212E4D3A004910BB /* LaunchScreen.storyboard */; };
+		E0EB6CCB212E4D3A004910BB /* CanaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EB6CCA212E4D3A004910BB /* CanaryTests.swift */; };
+		E0EB6CD6212E4D3A004910BB /* CanaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EB6CD5212E4D3A004910BB /* CanaryUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E0EB6CC7212E4D3A004910BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0EB6CAA212E4D37004910BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0EB6CB1212E4D37004910BB;
+			remoteInfo = Canary;
+		};
+		E0EB6CD2212E4D3A004910BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0EB6CAA212E4D37004910BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0EB6CB1212E4D37004910BB;
+			remoteInfo = Canary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E0EB6CB2212E4D37004910BB /* Canary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0EB6CB5212E4D37004910BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E0EB6CB7212E4D37004910BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E0EB6CBA212E4D37004910BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E0EB6CBC212E4D3A004910BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E0EB6CBF212E4D3A004910BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E0EB6CC1212E4D3A004910BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0EB6CC6212E4D3A004910BB /* CanaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0EB6CCA212E4D3A004910BB /* CanaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanaryTests.swift; sourceTree = "<group>"; };
+		E0EB6CCC212E4D3A004910BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0EB6CD1212E4D3A004910BB /* CanaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0EB6CD5212E4D3A004910BB /* CanaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanaryUITests.swift; sourceTree = "<group>"; };
+		E0EB6CD7212E4D3A004910BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E0EB6CAF212E4D37004910BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0EB6CC3212E4D3A004910BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0EB6CCE212E4D3A004910BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E0EB6CA9212E4D37004910BB = {
+			isa = PBXGroup;
+			children = (
+				E0EB6CB4212E4D37004910BB /* Canary */,
+				E0EB6CC9212E4D3A004910BB /* CanaryTests */,
+				E0EB6CD4212E4D3A004910BB /* CanaryUITests */,
+				E0EB6CB3212E4D37004910BB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E0EB6CB3212E4D37004910BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E0EB6CB2212E4D37004910BB /* Canary.app */,
+				E0EB6CC6212E4D3A004910BB /* CanaryTests.xctest */,
+				E0EB6CD1212E4D3A004910BB /* CanaryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E0EB6CB4212E4D37004910BB /* Canary */ = {
+			isa = PBXGroup;
+			children = (
+				E0EB6CB5212E4D37004910BB /* AppDelegate.swift */,
+				E0EB6CB7212E4D37004910BB /* ViewController.swift */,
+				E0EB6CB9212E4D37004910BB /* Main.storyboard */,
+				E0EB6CBC212E4D3A004910BB /* Assets.xcassets */,
+				E0EB6CBE212E4D3A004910BB /* LaunchScreen.storyboard */,
+				E0EB6CC1212E4D3A004910BB /* Info.plist */,
+			);
+			path = Canary;
+			sourceTree = "<group>";
+		};
+		E0EB6CC9212E4D3A004910BB /* CanaryTests */ = {
+			isa = PBXGroup;
+			children = (
+				E0EB6CCA212E4D3A004910BB /* CanaryTests.swift */,
+				E0EB6CCC212E4D3A004910BB /* Info.plist */,
+			);
+			path = CanaryTests;
+			sourceTree = "<group>";
+		};
+		E0EB6CD4212E4D3A004910BB /* CanaryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E0EB6CD5212E4D3A004910BB /* CanaryUITests.swift */,
+				E0EB6CD7212E4D3A004910BB /* Info.plist */,
+			);
+			path = CanaryUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E0EB6CB1212E4D37004910BB /* Canary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0EB6CDA212E4D3A004910BB /* Build configuration list for PBXNativeTarget "Canary" */;
+			buildPhases = (
+				E0EB6CAE212E4D37004910BB /* Sources */,
+				E0EB6CAF212E4D37004910BB /* Frameworks */,
+				E0EB6CB0212E4D37004910BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Canary;
+			productName = Canary;
+			productReference = E0EB6CB2212E4D37004910BB /* Canary.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E0EB6CC5212E4D3A004910BB /* CanaryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0EB6CDD212E4D3A004910BB /* Build configuration list for PBXNativeTarget "CanaryTests" */;
+			buildPhases = (
+				E0EB6CC2212E4D3A004910BB /* Sources */,
+				E0EB6CC3212E4D3A004910BB /* Frameworks */,
+				E0EB6CC4212E4D3A004910BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0EB6CC8212E4D3A004910BB /* PBXTargetDependency */,
+			);
+			name = CanaryTests;
+			productName = CanaryTests;
+			productReference = E0EB6CC6212E4D3A004910BB /* CanaryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E0EB6CD0212E4D3A004910BB /* CanaryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0EB6CE0212E4D3A004910BB /* Build configuration list for PBXNativeTarget "CanaryUITests" */;
+			buildPhases = (
+				E0EB6CCD212E4D3A004910BB /* Sources */,
+				E0EB6CCE212E4D3A004910BB /* Frameworks */,
+				E0EB6CCF212E4D3A004910BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0EB6CD3212E4D3A004910BB /* PBXTargetDependency */,
+			);
+			name = CanaryUITests;
+			productName = CanaryUITests;
+			productReference = E0EB6CD1212E4D3A004910BB /* CanaryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E0EB6CAA212E4D37004910BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = bangohan;
+				TargetAttributes = {
+					E0EB6CB1212E4D37004910BB = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					E0EB6CC5212E4D3A004910BB = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = E0EB6CB1212E4D37004910BB;
+					};
+					E0EB6CD0212E4D3A004910BB = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = E0EB6CB1212E4D37004910BB;
+					};
+				};
+			};
+			buildConfigurationList = E0EB6CAD212E4D37004910BB /* Build configuration list for PBXProject "Canary" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E0EB6CA9212E4D37004910BB;
+			productRefGroup = E0EB6CB3212E4D37004910BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E0EB6CB1212E4D37004910BB /* Canary */,
+				E0EB6CC5212E4D3A004910BB /* CanaryTests */,
+				E0EB6CD0212E4D3A004910BB /* CanaryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E0EB6CB0212E4D37004910BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0EB6CC0212E4D3A004910BB /* LaunchScreen.storyboard in Resources */,
+				E0EB6CBD212E4D3A004910BB /* Assets.xcassets in Resources */,
+				E0EB6CBB212E4D37004910BB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0EB6CC4212E4D3A004910BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0EB6CCF212E4D3A004910BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E0EB6CAE212E4D37004910BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0EB6CB8212E4D37004910BB /* ViewController.swift in Sources */,
+				E0EB6CB6212E4D37004910BB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0EB6CC2212E4D3A004910BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0EB6CCB212E4D3A004910BB /* CanaryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0EB6CCD212E4D3A004910BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0EB6CD6212E4D3A004910BB /* CanaryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E0EB6CC8212E4D3A004910BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0EB6CB1212E4D37004910BB /* Canary */;
+			targetProxy = E0EB6CC7212E4D3A004910BB /* PBXContainerItemProxy */;
+		};
+		E0EB6CD3212E4D3A004910BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0EB6CB1212E4D37004910BB /* Canary */;
+			targetProxy = E0EB6CD2212E4D3A004910BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E0EB6CB9212E4D37004910BB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0EB6CBA212E4D37004910BB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E0EB6CBE212E4D3A004910BB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0EB6CBF212E4D3A004910BB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E0EB6CD8212E4D3A004910BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E0EB6CD9212E4D3A004910BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E0EB6CDB212E4D3A004910BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K677BRB35L;
+				INFOPLIST_FILE = Canary/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bangohan.Canary;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E0EB6CDC212E4D3A004910BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K677BRB35L;
+				INFOPLIST_FILE = Canary/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bangohan.Canary;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E0EB6CDE212E4D3A004910BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K677BRB35L;
+				INFOPLIST_FILE = CanaryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bangohan.CanaryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Canary.app/Canary";
+			};
+			name = Debug;
+		};
+		E0EB6CDF212E4D3A004910BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K677BRB35L;
+				INFOPLIST_FILE = CanaryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bangohan.CanaryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Canary.app/Canary";
+			};
+			name = Release;
+		};
+		E0EB6CE1212E4D3A004910BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K677BRB35L;
+				INFOPLIST_FILE = CanaryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bangohan.CanaryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Canary;
+			};
+			name = Debug;
+		};
+		E0EB6CE2212E4D3A004910BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K677BRB35L;
+				INFOPLIST_FILE = CanaryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bangohan.CanaryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Canary;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E0EB6CAD212E4D37004910BB /* Build configuration list for PBXProject "Canary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0EB6CD8212E4D3A004910BB /* Debug */,
+				E0EB6CD9212E4D3A004910BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0EB6CDA212E4D3A004910BB /* Build configuration list for PBXNativeTarget "Canary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0EB6CDB212E4D3A004910BB /* Debug */,
+				E0EB6CDC212E4D3A004910BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0EB6CDD212E4D3A004910BB /* Build configuration list for PBXNativeTarget "CanaryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0EB6CDE212E4D3A004910BB /* Debug */,
+				E0EB6CDF212E4D3A004910BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0EB6CE0212E4D3A004910BB /* Build configuration list for PBXNativeTarget "CanaryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0EB6CE1212E4D3A004910BB /* Debug */,
+				E0EB6CE2212E4D3A004910BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E0EB6CAA212E4D37004910BB /* Project object */;
+}
