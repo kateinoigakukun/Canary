@@ -14,6 +14,11 @@
 		E0EB6CC0212E4D3A004910BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0EB6CBE212E4D3A004910BB /* LaunchScreen.storyboard */; };
 		E0EB6CCB212E4D3A004910BB /* CanaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EB6CCA212E4D3A004910BB /* CanaryTests.swift */; };
 		E0EB6CD6212E4D3A004910BB /* CanaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EB6CD5212E4D3A004910BB /* CanaryUITests.swift */; };
+		E0EB6D18212E4E77004910BB /* CanaryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EB6D0F212E4E77004910BB /* CanaryKit.framework */; };
+		E0EB6D1F212E4E78004910BB /* CanaryKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EB6D1E212E4E78004910BB /* CanaryKitTests.swift */; };
+		E0EB6D21212E4E78004910BB /* CanaryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E0EB6D11212E4E77004910BB /* CanaryKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0EB6D24212E4E78004910BB /* CanaryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EB6D0F212E4E77004910BB /* CanaryKit.framework */; };
+		E0EB6D25212E4E78004910BB /* CanaryKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0EB6D0F212E4E77004910BB /* CanaryKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +36,42 @@
 			remoteGlobalIDString = E0EB6CB1212E4D37004910BB;
 			remoteInfo = Canary;
 		};
+		E0EB6D19212E4E77004910BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0EB6CAA212E4D37004910BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0EB6D0E212E4E77004910BB;
+			remoteInfo = CanaryKit;
+		};
+		E0EB6D1B212E4E78004910BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0EB6CAA212E4D37004910BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0EB6CB1212E4D37004910BB;
+			remoteInfo = Canary;
+		};
+		E0EB6D22212E4E78004910BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0EB6CAA212E4D37004910BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0EB6D0E212E4E77004910BB;
+			remoteInfo = CanaryKit;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E0EB6D2B212E4E78004910BB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E0EB6D25212E4E78004910BB /* CanaryKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E0EB6CB2212E4D37004910BB /* Canary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +87,12 @@
 		E0EB6CD1212E4D3A004910BB /* CanaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EB6CD5212E4D3A004910BB /* CanaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanaryUITests.swift; sourceTree = "<group>"; };
 		E0EB6CD7212E4D3A004910BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0EB6D0F212E4E77004910BB /* CanaryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CanaryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0EB6D11212E4E77004910BB /* CanaryKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanaryKit.h; sourceTree = "<group>"; };
+		E0EB6D12212E4E77004910BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0EB6D17212E4E77004910BB /* CanaryKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanaryKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0EB6D1E212E4E78004910BB /* CanaryKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanaryKitTests.swift; sourceTree = "<group>"; };
+		E0EB6D20212E4E78004910BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0EB6D24212E4E78004910BB /* CanaryKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +118,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E0EB6D0C212E4E77004910BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0EB6D14212E4E77004910BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0EB6D18212E4E77004910BB /* CanaryKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +142,8 @@
 				E0EB6CB4212E4D37004910BB /* Canary */,
 				E0EB6CC9212E4D3A004910BB /* CanaryTests */,
 				E0EB6CD4212E4D3A004910BB /* CanaryUITests */,
+				E0EB6D10212E4E77004910BB /* CanaryKit */,
+				E0EB6D1D212E4E78004910BB /* CanaryKitTests */,
 				E0EB6CB3212E4D37004910BB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +154,8 @@
 				E0EB6CB2212E4D37004910BB /* Canary.app */,
 				E0EB6CC6212E4D3A004910BB /* CanaryTests.xctest */,
 				E0EB6CD1212E4D3A004910BB /* CanaryUITests.xctest */,
+				E0EB6D0F212E4E77004910BB /* CanaryKit.framework */,
+				E0EB6D17212E4E77004910BB /* CanaryKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,7 +191,36 @@
 			path = CanaryUITests;
 			sourceTree = "<group>";
 		};
+		E0EB6D10212E4E77004910BB /* CanaryKit */ = {
+			isa = PBXGroup;
+			children = (
+				E0EB6D11212E4E77004910BB /* CanaryKit.h */,
+				E0EB6D12212E4E77004910BB /* Info.plist */,
+			);
+			path = CanaryKit;
+			sourceTree = "<group>";
+		};
+		E0EB6D1D212E4E78004910BB /* CanaryKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				E0EB6D1E212E4E78004910BB /* CanaryKitTests.swift */,
+				E0EB6D20212E4E78004910BB /* Info.plist */,
+			);
+			path = CanaryKitTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E0EB6D0A212E4E77004910BB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0EB6D21212E4E78004910BB /* CanaryKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		E0EB6CB1212E4D37004910BB /* Canary */ = {
@@ -135,10 +230,12 @@
 				E0EB6CAE212E4D37004910BB /* Sources */,
 				E0EB6CAF212E4D37004910BB /* Frameworks */,
 				E0EB6CB0212E4D37004910BB /* Resources */,
+				E0EB6D2B212E4E78004910BB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E0EB6D23212E4E78004910BB /* PBXTargetDependency */,
 			);
 			name = Canary;
 			productName = Canary;
@@ -181,6 +278,43 @@
 			productReference = E0EB6CD1212E4D3A004910BB /* CanaryUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E0EB6D0E212E4E77004910BB /* CanaryKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0EB6D2A212E4E78004910BB /* Build configuration list for PBXNativeTarget "CanaryKit" */;
+			buildPhases = (
+				E0EB6D0A212E4E77004910BB /* Headers */,
+				E0EB6D0B212E4E77004910BB /* Sources */,
+				E0EB6D0C212E4E77004910BB /* Frameworks */,
+				E0EB6D0D212E4E77004910BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CanaryKit;
+			productName = CanaryKit;
+			productReference = E0EB6D0F212E4E77004910BB /* CanaryKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E0EB6D16212E4E77004910BB /* CanaryKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0EB6D2C212E4E78004910BB /* Build configuration list for PBXNativeTarget "CanaryKitTests" */;
+			buildPhases = (
+				E0EB6D13212E4E77004910BB /* Sources */,
+				E0EB6D14212E4E77004910BB /* Frameworks */,
+				E0EB6D15212E4E77004910BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0EB6D1A212E4E77004910BB /* PBXTargetDependency */,
+				E0EB6D1C212E4E78004910BB /* PBXTargetDependency */,
+			);
+			name = CanaryKitTests;
+			productName = CanaryKitTests;
+			productReference = E0EB6D17212E4E77004910BB /* CanaryKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -202,6 +336,13 @@
 						CreatedOnToolsVersion = 10.0;
 						TestTargetID = E0EB6CB1212E4D37004910BB;
 					};
+					E0EB6D0E212E4E77004910BB = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					E0EB6D16212E4E77004910BB = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = E0EB6CB1212E4D37004910BB;
+					};
 				};
 			};
 			buildConfigurationList = E0EB6CAD212E4D37004910BB /* Build configuration list for PBXProject "Canary" */;
@@ -220,6 +361,8 @@
 				E0EB6CB1212E4D37004910BB /* Canary */,
 				E0EB6CC5212E4D3A004910BB /* CanaryTests */,
 				E0EB6CD0212E4D3A004910BB /* CanaryUITests */,
+				E0EB6D0E212E4E77004910BB /* CanaryKit */,
+				E0EB6D16212E4E77004910BB /* CanaryKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -243,6 +386,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E0EB6CCF212E4D3A004910BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0EB6D0D212E4E77004910BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0EB6D15212E4E77004910BB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -277,6 +434,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E0EB6D0B212E4E77004910BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0EB6D13212E4E77004910BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0EB6D1F212E4E78004910BB /* CanaryKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,6 +461,21 @@
 			isa = PBXTargetDependency;
 			target = E0EB6CB1212E4D37004910BB /* Canary */;
 			targetProxy = E0EB6CD2212E4D3A004910BB /* PBXContainerItemProxy */;
+		};
+		E0EB6D1A212E4E77004910BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0EB6D0E212E4E77004910BB /* CanaryKit */;
+			targetProxy = E0EB6D19212E4E77004910BB /* PBXContainerItemProxy */;
+		};
+		E0EB6D1C212E4E78004910BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0EB6CB1212E4D37004910BB /* Canary */;
+			targetProxy = E0EB6D1B212E4E78004910BB /* PBXContainerItemProxy */;
+		};
+		E0EB6D23212E4E78004910BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0EB6D0E212E4E77004910BB /* CanaryKit */;
+			targetProxy = E0EB6D22212E4E78004910BB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -546,6 +733,102 @@
 			};
 			name = Release;
 		};
+		E0EB6D26212E4E78004910BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = K677BRB35L;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CanaryKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bangohan.CanaryKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E0EB6D27212E4E78004910BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = K677BRB35L;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CanaryKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bangohan.CanaryKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E0EB6D28212E4E78004910BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K677BRB35L;
+				INFOPLIST_FILE = CanaryKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bangohan.CanaryKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Canary.app/Canary";
+			};
+			name = Debug;
+		};
+		E0EB6D29212E4E78004910BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K677BRB35L;
+				INFOPLIST_FILE = CanaryKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bangohan.CanaryKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Canary.app/Canary";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -581,6 +864,24 @@
 			buildConfigurations = (
 				E0EB6CE1212E4D3A004910BB /* Debug */,
 				E0EB6CE2212E4D3A004910BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0EB6D2A212E4E78004910BB /* Build configuration list for PBXNativeTarget "CanaryKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0EB6D26212E4E78004910BB /* Debug */,
+				E0EB6D27212E4E78004910BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0EB6D2C212E4E78004910BB /* Build configuration list for PBXNativeTarget "CanaryKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0EB6D28212E4E78004910BB /* Debug */,
+				E0EB6D29212E4E78004910BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
