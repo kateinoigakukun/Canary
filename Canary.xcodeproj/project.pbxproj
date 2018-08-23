@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0CE3AF8212E6FB50091FBA0 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CE3AF7212E6FB50091FBA0 /* Store.swift */; };
 		E0EB6CB6212E4D37004910BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EB6CB5212E4D37004910BB /* AppDelegate.swift */; };
 		E0EB6CB8212E4D37004910BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EB6CB7212E4D37004910BB /* ViewController.swift */; };
 		E0EB6CBB212E4D37004910BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0EB6CB9212E4D37004910BB /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		E0EB6D47212E4F7E004910BB /* Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EB6D32212E4F7D004910BB /* Framework.framework */; };
 		E0EB6D48212E4F7E004910BB /* Framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0EB6D32212E4F7D004910BB /* Framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E0EB6D53212E51E8004910BB /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EB6D52212E51E8004910BB /* ReactiveSwift.framework */; };
+		E0EB6D55212E5209004910BB /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EB6D54212E5209004910BB /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E0CE3AF7212E6FB50091FBA0 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		E0EB6CB2212E4D37004910BB /* Canary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EB6CB5212E4D37004910BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0EB6CB7212E4D37004910BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +131,7 @@
 		E0EB6D41212E4F7E004910BB /* FrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkTests.swift; sourceTree = "<group>"; };
 		E0EB6D43212E4F7E004910BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0EB6D52212E51E8004910BB /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		E0EB6D54212E5209004910BB /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +275,8 @@
 			children = (
 				E0EB6D34212E4F7D004910BB /* Framework.h */,
 				E0EB6D35212E4F7D004910BB /* Info.plist */,
+				E0EB6D54212E5209004910BB /* View.swift */,
+				E0CE3AF7212E6FB50091FBA0 /* Store.swift */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -474,6 +480,7 @@
 					};
 					E0EB6D31212E4F7D004910BB = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					E0EB6D39212E4F7D004910BB = {
 						CreatedOnToolsVersion = 10.0;
@@ -605,6 +612,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0EB6D55212E5209004910BB /* View.swift in Sources */,
+				E0CE3AF8212E6FB50091FBA0 /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -800,6 +809,7 @@
 		E0EB6CDB212E4D3A004910BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K677BRB35L;
@@ -818,6 +828,7 @@
 		E0EB6CDC212E4D3A004910BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K677BRB35L;
@@ -1014,6 +1025,7 @@
 		E0EB6D4A212E4F7E004910BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1036,6 +1048,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = bangohan.Framework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1046,6 +1059,7 @@
 		E0EB6D4B212E4F7E004910BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
