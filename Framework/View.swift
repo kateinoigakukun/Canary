@@ -9,7 +9,7 @@
 import ReactiveSwift
 import Result
 
-protocol View {
+public protocol View {
     associatedtype Action
     associatedtype State
 
@@ -18,16 +18,15 @@ protocol View {
 
 extension View {
 
-    func inject<S: Store>(store: S) -> Disposable? where S.Action == Action, S.State == State {
+    public func inject<S: Store>(store: S) -> Disposable? where S.Action == Action, S.State == State {
         let (stateOutput, stateInput) = Signal<State, NoError>.pipe()
         let binder = bind(state: stateOutput)
-        let disposable = binder.action
-            .combineLatest(with: stateOutput)
+        let disposable = binder.action.withLatest(from: stateOutput)
             .flatMap(.concurrent(limit: 10)) { (action, state)in
                 return store.mutate(action: action, state: state)
-                    .combineLatest(with: stateOutput)
-                    .map { store.reduce(mutation: $0.0, state: $0.1) }
             }
+            .withLatest(from: stateOutput)
+            .map { store.reduce(mutation: $0.0, state: $0.1) }
             .observe(stateInput)
 
         stateInput.send(value: store.initialState)
@@ -35,7 +34,12 @@ extension View {
     }
 }
 
-struct Binder<Action> {
+public struct Binder<Action> {
     let action: Signal<Action, NoError>
     let disposable: Disposable
+
+    public init(action: Signal<Action, NoError>, disposable: Disposable = AnyDisposable()) {
+        self.action = action
+        self.disposable = disposable
+    }
 }

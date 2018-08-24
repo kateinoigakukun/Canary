@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E0CE3AF8212E6FB50091FBA0 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CE3AF7212E6FB50091FBA0 /* Store.swift */; };
+		E0CE3AF9212E71690091FBA0 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EB6D52212E51E8004910BB /* ReactiveSwift.framework */; };
+		E0CE3AFB212E71690091FBA0 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CE3AFA212E71690091FBA0 /* ReactiveCocoa.framework */; };
 		E0EB6CB6212E4D37004910BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EB6CB5212E4D37004910BB /* AppDelegate.swift */; };
 		E0EB6CB8212E4D37004910BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EB6CB7212E4D37004910BB /* ViewController.swift */; };
 		E0EB6CBB212E4D37004910BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0EB6CB9212E4D37004910BB /* Main.storyboard */; };
@@ -105,6 +107,7 @@
 
 /* Begin PBXFileReference section */
 		E0CE3AF7212E6FB50091FBA0 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		E0CE3AFA212E71690091FBA0 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		E0EB6CB2212E4D37004910BB /* Canary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EB6CB5212E4D37004910BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0EB6CB7212E4D37004910BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0CE3AFB212E71690091FBA0 /* ReactiveCocoa.framework in Frameworks */,
+				E0CE3AF9212E71690091FBA0 /* ReactiveSwift.framework in Frameworks */,
 				E0EB6D24212E4E78004910BB /* CanaryKit.framework in Frameworks */,
 				E0EB6D47212E4F7E004910BB /* Framework.framework in Frameworks */,
 			);
@@ -293,6 +298,7 @@
 		E0EB6D51212E51E8004910BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E0CE3AFA212E71690091FBA0 /* ReactiveCocoa.framework */,
 				E0EB6D52212E51E8004910BB /* ReactiveSwift.framework */,
 			);
 			name = Frameworks;
@@ -328,6 +334,7 @@
 				E0EB6CAF212E4D37004910BB /* Frameworks */,
 				E0EB6CB0212E4D37004910BB /* Resources */,
 				E0EB6D2B212E4E78004910BB /* Embed Frameworks */,
+				E0CE3AFC212E754F0091FBA0 /* Copy Carthage */,
 			);
 			buildRules = (
 			);
@@ -566,6 +573,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E0CE3AFC212E754F0091FBA0 /* Copy Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+			);
+			name = "Copy Carthage";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E0EB6CAE212E4D37004910BB /* Sources */ = {
@@ -813,6 +844,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K677BRB35L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Canary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -832,6 +867,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K677BRB35L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Canary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

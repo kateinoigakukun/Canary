@@ -9,7 +9,7 @@
 import ReactiveSwift
 import Result
 
-protocol Store {
+public protocol Store {
     associatedtype Action
     associatedtype Mutation
     associatedtype State
