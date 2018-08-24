@@ -11,7 +11,7 @@ import APIKit
 public protocol CanaryRequest: APIKit.Request {
     associatedtype Error: Swift.Error
 
-    func error(from object: Any, urlResponse: URLResponse) -> Error
+    func error(from object: Any, urlResponse: URLResponse) throws -> Error
 }
 
 enum CanaryRequestError<EndpointError: Error>: Error {
@@ -20,10 +20,42 @@ enum CanaryRequestError<EndpointError: Error>: Error {
     case responseError(Error)
     case endpointError(EndpointError)
     case unexpectedError(Error)
+    case dataParseError
 }
 
 extension CanaryRequest {
     public func intercept(object: Any, urlResponse: HTTPURLResponse) throws -> Any {
-        throw error(from: object, urlResponse: urlResponse)
+        throw try error(from: object, urlResponse: urlResponse)
+    }
+}
+
+extension CanaryRequest where Response: Decodable, Error: Decodable {
+    var dataParser: DataParser {
+        return JSONRawDataParser()
+    }
+}
+
+extension CanaryRequest where Response: Decodable {
+    public func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
+        let decoder = JSONDecoder()
+        guard let data = object as? Data else { throw CanaryRequestError<Error>.dataParseError }
+        return try decoder.decode(Response.self, from: data)
+    }
+}
+
+extension CanaryRequest where Error: Decodable {
+    func error(from object: Any, urlResponse: URLResponse) throws -> Error {
+        let decoder = JSONDecoder()
+        guard let data = object as? Data else { throw CanaryRequestError<Error>.dataParseError }
+        return try decoder.decode(Error.self, from: data)
+    }
+}
+
+class JSONRawDataParser: DataParser {
+    public var contentType: String? {
+        return "application/json"
+    }
+    func parse(data: Data) throws -> Any {
+        return data
     }
 }

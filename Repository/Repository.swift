@@ -18,11 +18,9 @@ protocol RepositoryType {
 class Repository: RepositoryType {
 
     private let client: ClientType
-    private let dispatchQueue: DispatchQueue
 
-    init(client: ClientType, dispatchQueue: DispatchQueue) {
+    init(client: ClientType) {
         self.client = client
-        self.dispatchQueue = dispatchQueue
     }
 
     func send<R: CanaryRequest>(_ request: R) -> SignalProducer<R.Response, CanaryRequestError<R.Error>> {

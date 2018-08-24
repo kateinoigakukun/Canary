@@ -266,6 +266,7 @@
 				E03DEF42212FB50B00A787B7 /* Repository.h */,
 				E03DEF5D212FB52800A787B7 /* Repository.swift */,
 				E03DEF65212FB7C300A787B7 /* Request.swift */,
+				E03DEF6A212FD53A00A787B7 /* Endpoints */,
 				E03DEF68212FBF2300A787B7 /* Client.swift */,
 				E03DEF43212FB50B00A787B7 /* Info.plist */,
 			);
@@ -279,6 +280,13 @@
 				E03DEF51212FB50B00A787B7 /* Info.plist */,
 			);
 			path = RepositoryTests;
+			sourceTree = "<group>";
+		};
+		E03DEF6A212FD53A00A787B7 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Endpoints;
 			sourceTree = "<group>";
 		};
 		E0EB6CA9212E4D37004910BB = {
