@@ -9,23 +9,23 @@
 import OAuthSwift
 import ReactiveSwift
 
-enum ClientError: Error {
+public enum ClientError: Error {
     case connectionError(Error)
     case requestError(Error)
     case responseError(Error)
 }
 
-enum ResponseError: Error {
+public enum ResponseError: Error {
     case nonHTTPURLResponse(URLResponse?)
 }
 
-protocol ClientType {
+public protocol ClientType {
     func send(_ request: URLRequest) -> SignalProducer<(Data, HTTPURLResponse), ClientError>
 }
 
 extension OAuthSwiftClient: ClientType {
 
-    func send(_ request: URLRequest) -> SignalProducer<(Data, HTTPURLResponse), ClientError> {
+    public func send(_ request: URLRequest) -> SignalProducer<(Data, HTTPURLResponse), ClientError> {
         return SignalProducer { [unowned self] observer, disposable in
             do {
                 let authorizedRequest = try self.makeRequest(request).makeRequest()

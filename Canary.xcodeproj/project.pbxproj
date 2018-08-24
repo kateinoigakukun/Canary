@@ -28,7 +28,19 @@
 		E03DEFB7212FDEEB00A787B7 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFB6212FDEEB00A787B7 /* Tweet.swift */; };
 		E03DEFBA212FE07200A787B7 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03DEF60212FB6B600A787B7 /* OAuthSwift.framework */; };
 		E03DEFBE212FEC9100A787B7 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFBD212FEC9100A787B7 /* Secret.swift */; };
-		E0CE3AF8212E6FB50091FBA0 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CE3AF7212E6FB50091FBA0 /* Store.swift */; };
+		E03DEFC3212FEEEC00A787B7 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFC2212FEEEC00A787B7 /* TimelineViewController.swift */; };
+		E03DEFC5212FEF7A00A787B7 /* TimelineViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E03DEFC4212FEF7A00A787B7 /* TimelineViewController.storyboard */; };
+		E03DEFC6212FEFF200A787B7 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CE3AF7212E6FB50091FBA0 /* Store.swift */; };
+		E03DEFC7212FEFF200A787B7 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EB6D54212E5209004910BB /* View.swift */; };
+		E03DEFC8212FF03D00A787B7 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03DEF60212FB6B600A787B7 /* OAuthSwift.framework */; };
+		E03DEFCA212FF08A00A787B7 /* TimelineStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFC9212FF08A00A787B7 /* TimelineStore.swift */; };
+		E03DEFCC212FF27800A787B7 /* SinceMaxPaginatedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFCB212FF27800A787B7 /* SinceMaxPaginatedRequest.swift */; };
+		E03DEFCE213011E800A787B7 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFCD213011E800A787B7 /* Identifiable.swift */; };
+		E03DEFD12130227600A787B7 /* ReactiveTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFD02130227600A787B7 /* ReactiveTableViewDataSource.swift */; };
+		E03DEFD3213031B400A787B7 /* DelegatedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFD2213031B400A787B7 /* DelegatedRequest.swift */; };
+		E03DEFD5213031EA00A787B7 /* Pagenation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFD4213031EA00A787B7 /* Pagenation.swift */; };
+		E03DEFD9213038DE00A787B7 /* UIScrollView+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFD8213038DE00A787B7 /* UIScrollView+Reactive.swift */; };
+		E03DEFDC21303E9A00A787B7 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFDB21303E9A00A787B7 /* Secret.swift */; };
 		E0CE3AF9212E71690091FBA0 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EB6D52212E51E8004910BB /* ReactiveSwift.framework */; };
 		E0CE3AFB212E71690091FBA0 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CE3AFA212E71690091FBA0 /* ReactiveCocoa.framework */; };
 		E0EB6CB6212E4D37004910BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EB6CB5212E4D37004910BB /* AppDelegate.swift */; };
@@ -43,13 +55,6 @@
 		E0EB6D21212E4E78004910BB /* CanaryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E0EB6D11212E4E77004910BB /* CanaryKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E0EB6D24212E4E78004910BB /* CanaryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EB6D0F212E4E77004910BB /* CanaryKit.framework */; };
 		E0EB6D25212E4E78004910BB /* CanaryKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0EB6D0F212E4E77004910BB /* CanaryKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E0EB6D3B212E4F7D004910BB /* Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EB6D32212E4F7D004910BB /* Framework.framework */; };
-		E0EB6D42212E4F7E004910BB /* FrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EB6D41212E4F7E004910BB /* FrameworkTests.swift */; };
-		E0EB6D44212E4F7E004910BB /* Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = E0EB6D34212E4F7D004910BB /* Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E0EB6D47212E4F7E004910BB /* Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EB6D32212E4F7D004910BB /* Framework.framework */; };
-		E0EB6D48212E4F7E004910BB /* Framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0EB6D32212E4F7D004910BB /* Framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E0EB6D53212E51E8004910BB /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EB6D52212E51E8004910BB /* ReactiveSwift.framework */; };
-		E0EB6D55212E5209004910BB /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EB6D54212E5209004910BB /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,27 +142,6 @@
 			remoteGlobalIDString = E0EB6D0E212E4E77004910BB;
 			remoteInfo = CanaryKit;
 		};
-		E0EB6D3C212E4F7D004910BB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E0EB6CAA212E4D37004910BB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E0EB6D31212E4F7D004910BB;
-			remoteInfo = Framework;
-		};
-		E0EB6D3E212E4F7E004910BB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E0EB6CAA212E4D37004910BB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E0EB6CB1212E4D37004910BB;
-			remoteInfo = Canary;
-		};
-		E0EB6D45212E4F7E004910BB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E0EB6CAA212E4D37004910BB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E0EB6D31212E4F7D004910BB;
-			remoteInfo = Framework;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -169,7 +153,6 @@
 			files = (
 				E0EB6D25212E4E78004910BB /* CanaryKit.framework in Embed Frameworks */,
 				E03DEFAA212FDD5E00A787B7 /* APIModel.framework in Embed Frameworks */,
-				E0EB6D48212E4F7E004910BB /* Framework.framework in Embed Frameworks */,
 				E03DEF56212FB50B00A787B7 /* Repository.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -199,6 +182,16 @@
 		E03DEFB4212FDDDF00A787B7 /* TimelineRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineRequest.swift; sourceTree = "<group>"; };
 		E03DEFB6212FDEEB00A787B7 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		E03DEFBD212FEC9100A787B7 /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
+		E03DEFC2212FEEEC00A787B7 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		E03DEFC4212FEF7A00A787B7 /* TimelineViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimelineViewController.storyboard; sourceTree = "<group>"; };
+		E03DEFC9212FF08A00A787B7 /* TimelineStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineStore.swift; sourceTree = "<group>"; };
+		E03DEFCB212FF27800A787B7 /* SinceMaxPaginatedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinceMaxPaginatedRequest.swift; sourceTree = "<group>"; };
+		E03DEFCD213011E800A787B7 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		E03DEFD02130227600A787B7 /* ReactiveTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveTableViewDataSource.swift; sourceTree = "<group>"; };
+		E03DEFD2213031B400A787B7 /* DelegatedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatedRequest.swift; sourceTree = "<group>"; };
+		E03DEFD4213031EA00A787B7 /* Pagenation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagenation.swift; sourceTree = "<group>"; };
+		E03DEFD8213038DE00A787B7 /* UIScrollView+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Reactive.swift"; sourceTree = "<group>"; };
+		E03DEFDB21303E9A00A787B7 /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		E0CE3AF7212E6FB50091FBA0 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		E0CE3AFA212E71690091FBA0 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		E0EB6CB2212E4D37004910BB /* Canary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,12 +213,6 @@
 		E0EB6D17212E4E77004910BB /* CanaryKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanaryKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EB6D1E212E4E78004910BB /* CanaryKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanaryKitTests.swift; sourceTree = "<group>"; };
 		E0EB6D20212E4E78004910BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E0EB6D32212E4F7D004910BB /* Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0EB6D34212E4F7D004910BB /* Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Framework.h; sourceTree = "<group>"; };
-		E0EB6D35212E4F7D004910BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E0EB6D3A212E4F7D004910BB /* FrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0EB6D41212E4F7E004910BB /* FrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkTests.swift; sourceTree = "<group>"; };
-		E0EB6D43212E4F7E004910BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0EB6D52212E51E8004910BB /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		E0EB6D54212E5209004910BB /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -273,7 +260,6 @@
 				E0CE3AFB212E71690091FBA0 /* ReactiveCocoa.framework in Frameworks */,
 				E0CE3AF9212E71690091FBA0 /* ReactiveSwift.framework in Frameworks */,
 				E0EB6D24212E4E78004910BB /* CanaryKit.framework in Frameworks */,
-				E0EB6D47212E4F7E004910BB /* Framework.framework in Frameworks */,
 				E03DEFA9212FDD5E00A787B7 /* APIModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +282,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E03DEFC8212FF03D00A787B7 /* OAuthSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,22 +294,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E0EB6D2F212E4F7D004910BB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E0EB6D53212E51E8004910BB /* ReactiveSwift.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E0EB6D37212E4F7D004910BB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E0EB6D3B212E4F7D004910BB /* Framework.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -331,6 +302,8 @@
 			children = (
 				E03DEF42212FB50B00A787B7 /* Repository.h */,
 				E03DEF5D212FB52800A787B7 /* Repository.swift */,
+				E03DEFD2213031B400A787B7 /* DelegatedRequest.swift */,
+				E03DEFD4213031EA00A787B7 /* Pagenation.swift */,
 				E03DEF65212FB7C300A787B7 /* Request.swift */,
 				E03DEFB3212FDDD500A787B7 /* Requests */,
 				E03DEF68212FBF2300A787B7 /* Client.swift */,
@@ -355,6 +328,7 @@
 				E03DEF96212FDD5E00A787B7 /* APIModel.h */,
 				E03DEFB1212FDD7000A787B7 /* APIError.swift */,
 				E03DEFB6212FDEEB00A787B7 /* Tweet.swift */,
+				E03DEFCD213011E800A787B7 /* Identifiable.swift */,
 				E03DEF97212FDD5E00A787B7 /* Info.plist */,
 			);
 			path = APIModel;
@@ -373,8 +347,52 @@
 			isa = PBXGroup;
 			children = (
 				E03DEFB4212FDDDF00A787B7 /* TimelineRequest.swift */,
+				E03DEFCB212FF27800A787B7 /* SinceMaxPaginatedRequest.swift */,
 			);
 			path = Requests;
+			sourceTree = "<group>";
+		};
+		E03DEFC1212FEEE300A787B7 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				E03DEFC2212FEEEC00A787B7 /* TimelineViewController.swift */,
+				E03DEFC4212FEF7A00A787B7 /* TimelineViewController.storyboard */,
+				E03DEFC9212FF08A00A787B7 /* TimelineStore.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		E03DEFCF2130223200A787B7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E03DEFDA21303E1E00A787B7 /* UIKit */,
+				E03DEFD7213038C400A787B7 /* Reactive */,
+				E03DEFD6213038B900A787B7 /* DataSources */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E03DEFD6213038B900A787B7 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				E03DEFD02130227600A787B7 /* ReactiveTableViewDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		E03DEFD7213038C400A787B7 /* Reactive */ = {
+			isa = PBXGroup;
+			children = (
+				E03DEFD8213038DE00A787B7 /* UIScrollView+Reactive.swift */,
+			);
+			path = Reactive;
+			sourceTree = "<group>";
+		};
+		E03DEFDA21303E1E00A787B7 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		E0EB6CA9212E4D37004910BB = {
@@ -385,8 +403,6 @@
 				E0EB6CD4212E4D3A004910BB /* CanaryUITests */,
 				E0EB6D10212E4E77004910BB /* CanaryKit */,
 				E0EB6D1D212E4E78004910BB /* CanaryKitTests */,
-				E0EB6D33212E4F7D004910BB /* Framework */,
-				E0EB6D40212E4F7E004910BB /* FrameworkTests */,
 				E03DEF41212FB50B00A787B7 /* Repository */,
 				E03DEF4E212FB50B00A787B7 /* RepositoryTests */,
 				E03DEF95212FDD5E00A787B7 /* APIModel */,
@@ -404,8 +420,6 @@
 				E0EB6CD1212E4D3A004910BB /* CanaryUITests.xctest */,
 				E0EB6D0F212E4E77004910BB /* CanaryKit.framework */,
 				E0EB6D17212E4E77004910BB /* CanaryKitTests.xctest */,
-				E0EB6D32212E4F7D004910BB /* Framework.framework */,
-				E0EB6D3A212E4F7D004910BB /* FrameworkTests.xctest */,
 				E03DEF40212FB50B00A787B7 /* Repository.framework */,
 				E03DEF48212FB50B00A787B7 /* RepositoryTests.xctest */,
 				E03DEF94212FDD5E00A787B7 /* APIModel.framework */,
@@ -419,6 +433,8 @@
 			children = (
 				E0EB6CB5212E4D37004910BB /* AppDelegate.swift */,
 				E0EB6CB7212E4D37004910BB /* ViewController.swift */,
+				E03DEFDB21303E9A00A787B7 /* Secret.swift */,
+				E03DEFC1212FEEE300A787B7 /* Timeline */,
 				E0EB6CB9212E4D37004910BB /* Main.storyboard */,
 				E0EB6CBC212E4D3A004910BB /* Assets.xcassets */,
 				E0EB6CBE212E4D3A004910BB /* LaunchScreen.storyboard */,
@@ -449,6 +465,9 @@
 			isa = PBXGroup;
 			children = (
 				E0EB6D11212E4E77004910BB /* CanaryKit.h */,
+				E0EB6D54212E5209004910BB /* View.swift */,
+				E0CE3AF7212E6FB50091FBA0 /* Store.swift */,
+				E03DEFCF2130223200A787B7 /* Extension */,
 				E0EB6D12212E4E77004910BB /* Info.plist */,
 			);
 			path = CanaryKit;
@@ -461,26 +480,6 @@
 				E0EB6D20212E4E78004910BB /* Info.plist */,
 			);
 			path = CanaryKitTests;
-			sourceTree = "<group>";
-		};
-		E0EB6D33212E4F7D004910BB /* Framework */ = {
-			isa = PBXGroup;
-			children = (
-				E0EB6D34212E4F7D004910BB /* Framework.h */,
-				E0EB6D35212E4F7D004910BB /* Info.plist */,
-				E0EB6D54212E5209004910BB /* View.swift */,
-				E0CE3AF7212E6FB50091FBA0 /* Store.swift */,
-			);
-			path = Framework;
-			sourceTree = "<group>";
-		};
-		E0EB6D40212E4F7E004910BB /* FrameworkTests */ = {
-			isa = PBXGroup;
-			children = (
-				E0EB6D41212E4F7E004910BB /* FrameworkTests.swift */,
-				E0EB6D43212E4F7E004910BB /* Info.plist */,
-			);
-			path = FrameworkTests;
 			sourceTree = "<group>";
 		};
 		E0EB6D51212E51E8004910BB /* Frameworks */ = {
@@ -518,14 +517,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0EB6D21212E4E78004910BB /* CanaryKit.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E0EB6D2D212E4F7D004910BB /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E0EB6D44212E4F7E004910BB /* Framework.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,7 +612,6 @@
 			);
 			dependencies = (
 				E0EB6D23212E4E78004910BB /* PBXTargetDependency */,
-				E0EB6D46212E4F7E004910BB /* PBXTargetDependency */,
 				E03DEF54212FB50B00A787B7 /* PBXTargetDependency */,
 				E03DEFA8212FDD5E00A787B7 /* PBXTargetDependency */,
 			);
@@ -703,43 +693,6 @@
 			productReference = E0EB6D17212E4E77004910BB /* CanaryKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E0EB6D31212E4F7D004910BB /* Framework */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E0EB6D49212E4F7E004910BB /* Build configuration list for PBXNativeTarget "Framework" */;
-			buildPhases = (
-				E0EB6D2D212E4F7D004910BB /* Headers */,
-				E0EB6D2E212E4F7D004910BB /* Sources */,
-				E0EB6D2F212E4F7D004910BB /* Frameworks */,
-				E0EB6D30212E4F7D004910BB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Framework;
-			productName = Framework;
-			productReference = E0EB6D32212E4F7D004910BB /* Framework.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		E0EB6D39212E4F7D004910BB /* FrameworkTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E0EB6D4C212E4F7E004910BB /* Build configuration list for PBXNativeTarget "FrameworkTests" */;
-			buildPhases = (
-				E0EB6D36212E4F7D004910BB /* Sources */,
-				E0EB6D37212E4F7D004910BB /* Frameworks */,
-				E0EB6D38212E4F7D004910BB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E0EB6D3D212E4F7D004910BB /* PBXTargetDependency */,
-				E0EB6D3F212E4F7E004910BB /* PBXTargetDependency */,
-			);
-			name = FrameworkTests;
-			productName = FrameworkTests;
-			productReference = E0EB6D3A212E4F7D004910BB /* FrameworkTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -784,14 +737,6 @@
 						CreatedOnToolsVersion = 10.0;
 						TestTargetID = E0EB6CB1212E4D37004910BB;
 					};
-					E0EB6D31212E4F7D004910BB = {
-						CreatedOnToolsVersion = 10.0;
-						LastSwiftMigration = 1000;
-					};
-					E0EB6D39212E4F7D004910BB = {
-						CreatedOnToolsVersion = 10.0;
-						TestTargetID = E0EB6CB1212E4D37004910BB;
-					};
 				};
 			};
 			buildConfigurationList = E0EB6CAD212E4D37004910BB /* Build configuration list for PBXProject "Canary" */;
@@ -812,8 +757,6 @@
 				E0EB6CD0212E4D3A004910BB /* CanaryUITests */,
 				E0EB6D0E212E4E77004910BB /* CanaryKit */,
 				E0EB6D16212E4E77004910BB /* CanaryKitTests */,
-				E0EB6D31212E4F7D004910BB /* Framework */,
-				E0EB6D39212E4F7D004910BB /* FrameworkTests */,
 				E03DEF3F212FB50B00A787B7 /* Repository */,
 				E03DEF47212FB50B00A787B7 /* RepositoryTests */,
 				E03DEF93212FDD5E00A787B7 /* APIModel */,
@@ -857,6 +800,7 @@
 			files = (
 				E0EB6CC0212E4D3A004910BB /* LaunchScreen.storyboard in Resources */,
 				E0EB6CBD212E4D3A004910BB /* Assets.xcassets in Resources */,
+				E03DEFC5212FEF7A00A787B7 /* TimelineViewController.storyboard in Resources */,
 				E0EB6CBB212E4D37004910BB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -883,20 +827,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E0EB6D15212E4E77004910BB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E0EB6D30212E4F7D004910BB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E0EB6D38212E4F7D004910BB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -937,9 +867,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E03DEFB5212FDDDF00A787B7 /* TimelineRequest.swift in Sources */,
+				E03DEFD3213031B400A787B7 /* DelegatedRequest.swift in Sources */,
+				E03DEFCC212FF27800A787B7 /* SinceMaxPaginatedRequest.swift in Sources */,
 				E03DEF5E212FB52800A787B7 /* Repository.swift in Sources */,
 				E03DEF66212FB7C300A787B7 /* Request.swift in Sources */,
 				E03DEF69212FBF2300A787B7 /* Client.swift in Sources */,
+				E03DEFD5213031EA00A787B7 /* Pagenation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -957,6 +890,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E03DEFB2212FDD7000A787B7 /* APIError.swift in Sources */,
+				E03DEFCE213011E800A787B7 /* Identifiable.swift in Sources */,
 				E03DEFB7212FDEEB00A787B7 /* Tweet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -974,7 +908,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0EB6CB8212E4D37004910BB /* ViewController.swift in Sources */,
+				E03DEFDC21303E9A00A787B7 /* Secret.swift in Sources */,
 				E0EB6CB6212E4D37004910BB /* AppDelegate.swift in Sources */,
+				E03DEFCA212FF08A00A787B7 /* TimelineStore.swift in Sources */,
+				E03DEFC3212FEEEC00A787B7 /* TimelineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -998,6 +935,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E03DEFD9213038DE00A787B7 /* UIScrollView+Reactive.swift in Sources */,
+				E03DEFD12130227600A787B7 /* ReactiveTableViewDataSource.swift in Sources */,
+				E03DEFC7212FEFF200A787B7 /* View.swift in Sources */,
+				E03DEFC6212FEFF200A787B7 /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1006,23 +947,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0EB6D1F212E4E78004910BB /* CanaryKitTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E0EB6D2E212E4F7D004910BB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E0EB6D55212E5209004910BB /* View.swift in Sources */,
-				E0CE3AF8212E6FB50091FBA0 /* Store.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E0EB6D36212E4F7D004910BB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E0EB6D42212E4F7E004910BB /* FrameworkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1088,21 +1012,6 @@
 			isa = PBXTargetDependency;
 			target = E0EB6D0E212E4E77004910BB /* CanaryKit */;
 			targetProxy = E0EB6D22212E4E78004910BB /* PBXContainerItemProxy */;
-		};
-		E0EB6D3D212E4F7D004910BB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E0EB6D31212E4F7D004910BB /* Framework */;
-			targetProxy = E0EB6D3C212E4F7D004910BB /* PBXContainerItemProxy */;
-		};
-		E0EB6D3F212E4F7E004910BB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E0EB6CB1212E4D37004910BB /* Canary */;
-			targetProxy = E0EB6D3E212E4F7E004910BB /* PBXContainerItemProxy */;
-		};
-		E0EB6D46212E4F7E004910BB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E0EB6D31212E4F7D004910BB /* Framework */;
-			targetProxy = E0EB6D45212E4F7E004910BB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1595,6 +1504,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CanaryKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1623,6 +1536,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CanaryKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1673,113 +1590,6 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bangohan.CanaryKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Canary.app/Canary";
-			};
-			name = Release;
-		};
-		E0EB6D4A212E4F7E004910BB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = K677BRB35L;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = Framework/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = bangohan.Framework;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E0EB6D4B212E4F7E004910BB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = K677BRB35L;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = Framework/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = bangohan.Framework;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E0EB6D4D212E4F7E004910BB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K677BRB35L;
-				INFOPLIST_FILE = FrameworkTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = bangohan.FrameworkTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Canary.app/Canary";
-			};
-			name = Debug;
-		};
-		E0EB6D4E212E4F7E004910BB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K677BRB35L;
-				INFOPLIST_FILE = FrameworkTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = bangohan.FrameworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1876,24 +1686,6 @@
 			buildConfigurations = (
 				E0EB6D28212E4E78004910BB /* Debug */,
 				E0EB6D29212E4E78004910BB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E0EB6D49212E4F7E004910BB /* Build configuration list for PBXNativeTarget "Framework" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E0EB6D4A212E4F7E004910BB /* Debug */,
-				E0EB6D4B212E4F7E004910BB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E0EB6D4C212E4F7E004910BB /* Build configuration list for PBXNativeTarget "FrameworkTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E0EB6D4D212E4F7E004910BB /* Debug */,
-				E0EB6D4E212E4F7E004910BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

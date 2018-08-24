@@ -1,6 +1,6 @@
 //
 //  View.swift
-//  Framework
+//  CanaryKit
 //
 //  Created by Yuta Saito on 2018/08/23.
 //  Copyright © 2018年 bangohan. All rights reserved.
@@ -14,11 +14,14 @@ public protocol View {
     associatedtype State
 
     func bind(state: Signal<State, NoError>) -> Binder<Action>
+    func inject<S: Store>(store: S) -> Disposable? where S.Action == Action, S.State == State
 }
 
-extension View {
+extension View where Self: UIViewController {
 
     public func inject<S: Store>(store: S) -> Disposable? where S.Action == Action, S.State == State {
+        // FIXME
+        _ = view
         let (stateOutput, stateInput) = Signal<State, NoError>.pipe()
         let binder = bind(state: stateOutput)
         let disposable = binder.action.withLatest(from: stateOutput)

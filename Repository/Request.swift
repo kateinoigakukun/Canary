@@ -15,7 +15,7 @@ public protocol CanaryRequest: APIKit.Request {
     func error(from object: Any, urlResponse: URLResponse) throws -> Error
 }
 
-enum CanaryRequestError<EndpointError: Error>: Error {
+public enum CanaryRequestError<EndpointError: Error>: Error {
     case connectionError(Error)
     case requestError(Error)
     case responseError(Error)
@@ -32,7 +32,7 @@ extension CanaryRequest {
 }
 
 extension CanaryRequest where Response: Decodable, Error: Decodable {
-    var dataParser: DataParser {
+    public var dataParser: DataParser {
         return JSONRawDataParser()
     }
 }
@@ -46,7 +46,7 @@ extension CanaryRequest where Response: Decodable {
 }
 
 extension CanaryRequest where Error: Decodable {
-    func error(from object: Any, urlResponse: URLResponse) throws -> Error {
+    public func error(from object: Any, urlResponse: URLResponse) throws -> Error {
         let decoder = JSONDecoder()
         guard let data = object as? Data else { throw CanaryRequestError<Error>.dataParseError }
         return try decoder.decode(Error.self, from: data)

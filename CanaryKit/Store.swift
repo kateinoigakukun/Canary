@@ -1,6 +1,6 @@
 //
 //  Store.swift
-//  Framework
+//  CanaryKit
 //
 //  Created by Yuta Saito on 2018/08/23.
 //  Copyright © 2018年 bangohan. All rights reserved.

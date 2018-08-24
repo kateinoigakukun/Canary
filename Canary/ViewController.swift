@@ -8,7 +8,9 @@
 
 import UIKit
 import ReactiveCocoa
-import Framework
+import CanaryKit
+import Repository
+import OAuthSwift
 
 class ViewController: UIViewController {
 
@@ -32,7 +34,6 @@ class ViewController: UIViewController {
 
 }
 
-
 extension ViewController: View {
     typealias Action = SampleStore.Action
     typealias State = SampleStore.State
@@ -47,7 +48,17 @@ extension ViewController: View {
         }
 
         button.reactive.controlEvents(.touchUpInside).observeValues { [unowned self] _ in
-            let vc = ViewController()
+            let storyboard = UIStoryboard(name: "TimelineViewController", bundle: nil)
+            let vc = storyboard.instantiateInitialViewController() as! TimelineViewController
+            let client = OAuthSwiftClient(
+                consumerKey: Secret.shared.consumerKey,
+                consumerSecret: Secret.shared.consumerSecret,
+                oauthToken: Secret.shared.oauthToken,
+                oauthTokenSecret: Secret.shared.oauthTokenSecret,
+                version: .oauth1
+            )
+            let store = TimelineStore(repository: PagingReposioty(initialRequest: HomeTimelineRequest(), client: client))
+            _ = vc.inject(store: store)
             self.navigationController?.pushViewController(vc, animated: true)
         }
 
