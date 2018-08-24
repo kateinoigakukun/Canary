@@ -1,16 +1,15 @@
 //
-//  RepositoryTests.swift
-//  RepositoryTests
+//  APIModelTests.swift
+//  APIModelTests
 //
 //  Created by Yuta Saito on 2018/08/24.
 //  Copyright © 2018年 bangohan. All rights reserved.
 //
 
 import XCTest
-import OAuthSwift
-@testable import Repository
+@testable import APIModel
 
-class RepositoryTests: XCTestCase {
+class APIModelTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -23,24 +22,6 @@ class RepositoryTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testTimelineRequest() {
-        let client = OAuthSwiftClient(
-            consumerKey: Secret.shared.consumerKey,
-            consumerSecret: Secret.shared.consumerSecret,
-            oauthToken: Secret.shared.oauthToken,
-            oauthTokenSecret: Secret.shared.oauthTokenSecret,
-            version: .oauth1
-        )
-        let repository = Repository(client: client)
-        let timelineRequest = TimelineRequest()
-        switch repository.send(timelineRequest).first()! {
-        case .success(let timeline):
-            XCTAssertFalse(timeline.isEmpty)
-        case .failure(let error):
-            XCTFail(String(describing: error))
-        }
     }
 
     func testPerformanceExample() {

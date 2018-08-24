@@ -26,15 +26,11 @@ protocol ClientType {
 extension OAuthSwiftClient: ClientType {
 
     func send(_ request: URLRequest) -> SignalProducer<(Data, HTTPURLResponse), ClientError> {
-        return SignalProducer { [unowned self] observer, _ in
+        return SignalProducer { [unowned self] observer, disposable in
             do {
                 let authorizedRequest = try self.makeRequest(request).makeRequest()
-                let session = URLSession(
-                    configuration: self.sessionFactory.configuration,
-                    delegate: self.sessionFactory.delegate,
-                    delegateQueue: self.sessionFactory.queue
-                )
-                session.dataTask(with: authorizedRequest) { (data, response, error) in
+                let session = URLSession.shared
+                let task = session.dataTask(with: authorizedRequest) { (data, response, error) in
                     switch (data, response, error) {
                     case (_, _, let error?):
                         observer.send(error: .connectionError(error))
@@ -43,6 +39,10 @@ extension OAuthSwiftClient: ClientType {
                     default:
                         observer.send(error: ClientError.responseError(ResponseError.nonHTTPURLResponse(response)))
                     }
+                }
+                task.resume()
+                disposable.observeEnded {
+                    task.cancel()
                 }
             } catch let error {
                 observer.send(error: .requestError(error))

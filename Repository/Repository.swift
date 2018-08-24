@@ -39,8 +39,14 @@ class Repository: RepositoryType {
                 }
                 .flatMap(.concat, { (data, urlResponse) -> SignalProducer<R.Response, CanaryRequestError<R.Error>> in
                     do {
-                        let response = try request.parse(data: data, urlResponse: urlResponse)
-                        return SignalProducer(value: response)
+                        let parsedObject = try request.dataParser.parse(data: data)
+                        let passedObject = try request.intercept(object: parsedObject, urlResponse: urlResponse)
+                        do {
+                            let response = try request.response(from: passedObject, urlResponse: urlResponse)
+                            return SignalProducer(value: response)
+                        } catch {
+                            throw try request.error(from: passedObject, urlResponse: urlResponse)
+                        }
                     }
                     catch let error as R.Error {
                         return SignalProducer(error: .endpointError(error))

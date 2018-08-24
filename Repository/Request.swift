@@ -7,9 +7,10 @@
 //
 
 import APIKit
+import APIModel
 
 public protocol CanaryRequest: APIKit.Request {
-    associatedtype Error: Swift.Error
+    associatedtype Error: Swift.Error = APIError
 
     func error(from object: Any, urlResponse: URLResponse) throws -> Error
 }
@@ -24,8 +25,9 @@ enum CanaryRequestError<EndpointError: Error>: Error {
 }
 
 extension CanaryRequest {
-    public func intercept(object: Any, urlResponse: HTTPURLResponse) throws -> Any {
-        throw try error(from: object, urlResponse: urlResponse)
+
+    public var baseURL: URL {
+        return URL(string: "https://api.twitter.com/1.1/")!
     }
 }
 

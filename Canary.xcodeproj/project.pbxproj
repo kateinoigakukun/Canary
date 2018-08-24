@@ -18,6 +18,16 @@
 		E03DEF66212FB7C300A787B7 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEF65212FB7C300A787B7 /* Request.swift */; };
 		E03DEF67212FB83D00A787B7 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EB6D52212E51E8004910BB /* ReactiveSwift.framework */; };
 		E03DEF69212FBF2300A787B7 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEF68212FBF2300A787B7 /* Client.swift */; };
+		E03DEF9D212FDD5E00A787B7 /* APIModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03DEF94212FDD5E00A787B7 /* APIModel.framework */; };
+		E03DEFA4212FDD5E00A787B7 /* APIModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFA3212FDD5E00A787B7 /* APIModelTests.swift */; };
+		E03DEFA6212FDD5E00A787B7 /* APIModel.h in Headers */ = {isa = PBXBuildFile; fileRef = E03DEF96212FDD5E00A787B7 /* APIModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E03DEFA9212FDD5E00A787B7 /* APIModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03DEF94212FDD5E00A787B7 /* APIModel.framework */; };
+		E03DEFAA212FDD5E00A787B7 /* APIModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E03DEF94212FDD5E00A787B7 /* APIModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E03DEFB2212FDD7000A787B7 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFB1212FDD7000A787B7 /* APIError.swift */; };
+		E03DEFB5212FDDDF00A787B7 /* TimelineRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFB4212FDDDF00A787B7 /* TimelineRequest.swift */; };
+		E03DEFB7212FDEEB00A787B7 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFB6212FDEEB00A787B7 /* Tweet.swift */; };
+		E03DEFBA212FE07200A787B7 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03DEF60212FB6B600A787B7 /* OAuthSwift.framework */; };
+		E03DEFBE212FEC9100A787B7 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFBD212FEC9100A787B7 /* Secret.swift */; };
 		E0CE3AF8212E6FB50091FBA0 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CE3AF7212E6FB50091FBA0 /* Store.swift */; };
 		E0CE3AF9212E71690091FBA0 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EB6D52212E51E8004910BB /* ReactiveSwift.framework */; };
 		E0CE3AFB212E71690091FBA0 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CE3AFA212E71690091FBA0 /* ReactiveCocoa.framework */; };
@@ -63,6 +73,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = E03DEF3F212FB50B00A787B7;
 			remoteInfo = Repository;
+		};
+		E03DEF9E212FDD5E00A787B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0EB6CAA212E4D37004910BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E03DEF93212FDD5E00A787B7;
+			remoteInfo = APIModel;
+		};
+		E03DEFA0212FDD5E00A787B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0EB6CAA212E4D37004910BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0EB6CB1212E4D37004910BB;
+			remoteInfo = Canary;
+		};
+		E03DEFA7212FDD5E00A787B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0EB6CAA212E4D37004910BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E03DEF93212FDD5E00A787B7;
+			remoteInfo = APIModel;
+		};
+		E03DEFB8212FDF6200A787B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0EB6CAA212E4D37004910BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E03DEF93212FDD5E00A787B7;
+			remoteInfo = APIModel;
 		};
 		E0EB6CC7212E4D3A004910BB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -130,6 +168,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				E0EB6D25212E4E78004910BB /* CanaryKit.framework in Embed Frameworks */,
+				E03DEFAA212FDD5E00A787B7 /* APIModel.framework in Embed Frameworks */,
 				E0EB6D48212E4F7E004910BB /* Framework.framework in Embed Frameworks */,
 				E03DEF56212FB50B00A787B7 /* Repository.framework in Embed Frameworks */,
 			);
@@ -150,6 +189,16 @@
 		E03DEF60212FB6B600A787B7 /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuthSwift.framework; path = Carthage/Build/iOS/OAuthSwift.framework; sourceTree = "<group>"; };
 		E03DEF65212FB7C300A787B7 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		E03DEF68212FBF2300A787B7 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		E03DEF94212FDD5E00A787B7 /* APIModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APIModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E03DEF96212FDD5E00A787B7 /* APIModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIModel.h; sourceTree = "<group>"; };
+		E03DEF97212FDD5E00A787B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E03DEF9C212FDD5E00A787B7 /* APIModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APIModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E03DEFA3212FDD5E00A787B7 /* APIModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModelTests.swift; sourceTree = "<group>"; };
+		E03DEFA5212FDD5E00A787B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E03DEFB1212FDD7000A787B7 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		E03DEFB4212FDDDF00A787B7 /* TimelineRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineRequest.swift; sourceTree = "<group>"; };
+		E03DEFB6212FDEEB00A787B7 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		E03DEFBD212FEC9100A787B7 /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		E0CE3AF7212E6FB50091FBA0 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		E0CE3AFA212E71690091FBA0 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		E0EB6CB2212E4D37004910BB /* Canary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,7 +245,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E03DEFBA212FE07200A787B7 /* OAuthSwift.framework in Frameworks */,
 				E03DEF49212FB50B00A787B7 /* Repository.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E03DEF91212FDD5E00A787B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E03DEF99212FDD5E00A787B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E03DEF9D212FDD5E00A787B7 /* APIModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +274,7 @@
 				E0CE3AF9212E71690091FBA0 /* ReactiveSwift.framework in Frameworks */,
 				E0EB6D24212E4E78004910BB /* CanaryKit.framework in Frameworks */,
 				E0EB6D47212E4F7E004910BB /* Framework.framework in Frameworks */,
+				E03DEFA9212FDD5E00A787B7 /* APIModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +332,7 @@
 				E03DEF42212FB50B00A787B7 /* Repository.h */,
 				E03DEF5D212FB52800A787B7 /* Repository.swift */,
 				E03DEF65212FB7C300A787B7 /* Request.swift */,
-				E03DEF6A212FD53A00A787B7 /* Endpoints */,
+				E03DEFB3212FDDD500A787B7 /* Requests */,
 				E03DEF68212FBF2300A787B7 /* Client.swift */,
 				E03DEF43212FB50B00A787B7 /* Info.plist */,
 			);
@@ -277,16 +343,38 @@
 			isa = PBXGroup;
 			children = (
 				E03DEF4F212FB50B00A787B7 /* RepositoryTests.swift */,
+				E03DEFBD212FEC9100A787B7 /* Secret.swift */,
 				E03DEF51212FB50B00A787B7 /* Info.plist */,
 			);
 			path = RepositoryTests;
 			sourceTree = "<group>";
 		};
-		E03DEF6A212FD53A00A787B7 /* Endpoints */ = {
+		E03DEF95212FDD5E00A787B7 /* APIModel */ = {
 			isa = PBXGroup;
 			children = (
+				E03DEF96212FDD5E00A787B7 /* APIModel.h */,
+				E03DEFB1212FDD7000A787B7 /* APIError.swift */,
+				E03DEFB6212FDEEB00A787B7 /* Tweet.swift */,
+				E03DEF97212FDD5E00A787B7 /* Info.plist */,
 			);
-			path = Endpoints;
+			path = APIModel;
+			sourceTree = "<group>";
+		};
+		E03DEFA2212FDD5E00A787B7 /* APIModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				E03DEFA3212FDD5E00A787B7 /* APIModelTests.swift */,
+				E03DEFA5212FDD5E00A787B7 /* Info.plist */,
+			);
+			path = APIModelTests;
+			sourceTree = "<group>";
+		};
+		E03DEFB3212FDDD500A787B7 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				E03DEFB4212FDDDF00A787B7 /* TimelineRequest.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		E0EB6CA9212E4D37004910BB = {
@@ -301,6 +389,8 @@
 				E0EB6D40212E4F7E004910BB /* FrameworkTests */,
 				E03DEF41212FB50B00A787B7 /* Repository */,
 				E03DEF4E212FB50B00A787B7 /* RepositoryTests */,
+				E03DEF95212FDD5E00A787B7 /* APIModel */,
+				E03DEFA2212FDD5E00A787B7 /* APIModelTests */,
 				E0EB6CB3212E4D37004910BB /* Products */,
 				E0EB6D51212E51E8004910BB /* Frameworks */,
 			);
@@ -318,6 +408,8 @@
 				E0EB6D3A212E4F7D004910BB /* FrameworkTests.xctest */,
 				E03DEF40212FB50B00A787B7 /* Repository.framework */,
 				E03DEF48212FB50B00A787B7 /* RepositoryTests.xctest */,
+				E03DEF94212FDD5E00A787B7 /* APIModel.framework */,
+				E03DEF9C212FDD5E00A787B7 /* APIModelTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -413,6 +505,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E03DEF8F212FDD5E00A787B7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E03DEFA6212FDD5E00A787B7 /* APIModel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E0EB6D0A212E4E77004910BB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -444,6 +544,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E03DEFB9212FDF6200A787B7 /* PBXTargetDependency */,
 			);
 			name = Repository;
 			productName = Repository;
@@ -469,6 +570,43 @@
 			productReference = E03DEF48212FB50B00A787B7 /* RepositoryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E03DEF93212FDD5E00A787B7 /* APIModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E03DEFAF212FDD5E00A787B7 /* Build configuration list for PBXNativeTarget "APIModel" */;
+			buildPhases = (
+				E03DEF8F212FDD5E00A787B7 /* Headers */,
+				E03DEF90212FDD5E00A787B7 /* Sources */,
+				E03DEF91212FDD5E00A787B7 /* Frameworks */,
+				E03DEF92212FDD5E00A787B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = APIModel;
+			productName = APIModel;
+			productReference = E03DEF94212FDD5E00A787B7 /* APIModel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E03DEF9B212FDD5E00A787B7 /* APIModelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E03DEFB0212FDD5E00A787B7 /* Build configuration list for PBXNativeTarget "APIModelTests" */;
+			buildPhases = (
+				E03DEF98212FDD5E00A787B7 /* Sources */,
+				E03DEF99212FDD5E00A787B7 /* Frameworks */,
+				E03DEF9A212FDD5E00A787B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E03DEF9F212FDD5E00A787B7 /* PBXTargetDependency */,
+				E03DEFA1212FDD5E00A787B7 /* PBXTargetDependency */,
+			);
+			name = APIModelTests;
+			productName = APIModelTests;
+			productReference = E03DEF9C212FDD5E00A787B7 /* APIModelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E0EB6CB1212E4D37004910BB /* Canary */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E0EB6CDA212E4D3A004910BB /* Build configuration list for PBXNativeTarget "Canary" */;
@@ -485,6 +623,7 @@
 				E0EB6D23212E4E78004910BB /* PBXTargetDependency */,
 				E0EB6D46212E4F7E004910BB /* PBXTargetDependency */,
 				E03DEF54212FB50B00A787B7 /* PBXTargetDependency */,
+				E03DEFA8212FDD5E00A787B7 /* PBXTargetDependency */,
 			);
 			name = Canary;
 			productName = Canary;
@@ -619,6 +758,14 @@
 						CreatedOnToolsVersion = 10.0;
 						TestTargetID = E0EB6CB1212E4D37004910BB;
 					};
+					E03DEF93212FDD5E00A787B7 = {
+						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
+					};
+					E03DEF9B212FDD5E00A787B7 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = E0EB6CB1212E4D37004910BB;
+					};
 					E0EB6CB1212E4D37004910BB = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -669,6 +816,8 @@
 				E0EB6D39212E4F7D004910BB /* FrameworkTests */,
 				E03DEF3F212FB50B00A787B7 /* Repository */,
 				E03DEF47212FB50B00A787B7 /* RepositoryTests */,
+				E03DEF93212FDD5E00A787B7 /* APIModel */,
+				E03DEF9B212FDD5E00A787B7 /* APIModelTests */,
 			);
 		};
 /* End PBXProject section */
@@ -682,6 +831,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E03DEF46212FB50B00A787B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E03DEF92212FDD5E00A787B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E03DEF9A212FDD5E00A787B7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -754,6 +917,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/OAuthSwift.framework",
 			);
 			name = "Copy Carthage";
 			outputFileListPaths = (
@@ -771,6 +936,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E03DEFB5212FDDDF00A787B7 /* TimelineRequest.swift in Sources */,
 				E03DEF5E212FB52800A787B7 /* Repository.swift in Sources */,
 				E03DEF66212FB7C300A787B7 /* Request.swift in Sources */,
 				E03DEF69212FBF2300A787B7 /* Client.swift in Sources */,
@@ -782,6 +948,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				E03DEF50212FB50B00A787B7 /* RepositoryTests.swift in Sources */,
+				E03DEFBE212FEC9100A787B7 /* Secret.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E03DEF90212FDD5E00A787B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E03DEFB2212FDD7000A787B7 /* APIError.swift in Sources */,
+				E03DEFB7212FDEEB00A787B7 /* Tweet.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E03DEF98212FDD5E00A787B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E03DEFA4212FDD5E00A787B7 /* APIModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -859,6 +1043,26 @@
 			isa = PBXTargetDependency;
 			target = E03DEF3F212FB50B00A787B7 /* Repository */;
 			targetProxy = E03DEF53212FB50B00A787B7 /* PBXContainerItemProxy */;
+		};
+		E03DEF9F212FDD5E00A787B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E03DEF93212FDD5E00A787B7 /* APIModel */;
+			targetProxy = E03DEF9E212FDD5E00A787B7 /* PBXContainerItemProxy */;
+		};
+		E03DEFA1212FDD5E00A787B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0EB6CB1212E4D37004910BB /* Canary */;
+			targetProxy = E03DEFA0212FDD5E00A787B7 /* PBXContainerItemProxy */;
+		};
+		E03DEFA8212FDD5E00A787B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E03DEF93212FDD5E00A787B7 /* APIModel */;
+			targetProxy = E03DEFA7212FDD5E00A787B7 /* PBXContainerItemProxy */;
+		};
+		E03DEFB9212FDF6200A787B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E03DEF93212FDD5E00A787B7 /* APIModel */;
+			targetProxy = E03DEFB8212FDF6200A787B7 /* PBXContainerItemProxy */;
 		};
 		E0EB6CC8212E4D3A004910BB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -995,6 +1199,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K677BRB35L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RepositoryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1015,6 +1223,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K677BRB35L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RepositoryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1022,6 +1234,105 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bangohan.RepositoryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Canary.app/Canary";
+			};
+			name = Release;
+		};
+		E03DEFAB212FDD5E00A787B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = K677BRB35L;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = APIModel/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bangohan.APIModel;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E03DEFAC212FDD5E00A787B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = K677BRB35L;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = APIModel/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bangohan.APIModel;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E03DEFAD212FDD5E00A787B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K677BRB35L;
+				INFOPLIST_FILE = APIModelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bangohan.APIModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Canary.app/Canary";
+			};
+			name = Debug;
+		};
+		E03DEFAE212FDD5E00A787B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K677BRB35L;
+				INFOPLIST_FILE = APIModelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bangohan.APIModelTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1493,6 +1804,24 @@
 			buildConfigurations = (
 				E03DEF59212FB50B00A787B7 /* Debug */,
 				E03DEF5A212FB50B00A787B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E03DEFAF212FDD5E00A787B7 /* Build configuration list for PBXNativeTarget "APIModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E03DEFAB212FDD5E00A787B7 /* Debug */,
+				E03DEFAC212FDD5E00A787B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E03DEFB0212FDD5E00A787B7 /* Build configuration list for PBXNativeTarget "APIModelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E03DEFAD212FDD5E00A787B7 /* Debug */,
+				E03DEFAE212FDD5E00A787B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
