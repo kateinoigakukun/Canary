@@ -48,8 +48,7 @@ extension ViewController: View {
         }
 
         button.reactive.controlEvents(.touchUpInside).observeValues { [unowned self] _ in
-            let storyboard = UIStoryboard(name: "TimelineViewController", bundle: nil)
-            let vc = storyboard.instantiateInitialViewController() as! TimelineViewController
+            let vc = TimelineViewController.canary.instantiate()
             let client = OAuthSwiftClient(
                 consumerKey: Secret.shared.consumerKey,
                 consumerSecret: Secret.shared.consumerSecret,
@@ -57,7 +56,21 @@ extension ViewController: View {
                 oauthTokenSecret: Secret.shared.oauthTokenSecret,
                 version: .oauth1
             )
-            let store = TimelineStore(repository: PagingReposioty(initialRequest: HomeTimelineRequest(), client: client))
+//            let store = TimelineStore(
+//                repository: PagingReposioty<SinceMaxPaginatedRequest>(
+//                    initialRequest: UserTimeLineRequest(
+//                        screenName: "OY_A_Official"
+//                    ),
+//                    client: client
+//                )
+//            )
+            let store = TimelineStore(
+                repository: PagingReposioty<SinceMaxPaginatedRequest>(
+                    initialRequest: SearchRequest(query: "iOSDC"),
+                    client: client
+                )
+            )
+
             _ = vc.inject(store: store)
             self.navigationController?.pushViewController(vc, animated: true)
         }

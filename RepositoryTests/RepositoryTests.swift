@@ -10,6 +10,14 @@ import XCTest
 import OAuthSwift
 @testable import Repository
 
+class MockRepository: RepositoryType {
+    var client: ClientType
+
+    init(client: ClientType) {
+        self.client = client
+    }
+}
+
 class RepositoryTests: XCTestCase {
 
     override func setUp() {
@@ -33,8 +41,8 @@ class RepositoryTests: XCTestCase {
             oauthTokenSecret: Secret.shared.oauthTokenSecret,
             version: .oauth1
         )
-        let repository = Repository(client: client)
-        let timelineRequest = TimelineRequest()
+        let repository = MockRepository(client: client)
+        let timelineRequest = HomeTimelineRequest()
         switch repository.send(timelineRequest).first()! {
         case .success(let timeline):
             XCTAssertFalse(timeline.isEmpty)

@@ -41,6 +41,9 @@
 		E03DEFD5213031EA00A787B7 /* Pagenation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFD4213031EA00A787B7 /* Pagenation.swift */; };
 		E03DEFD9213038DE00A787B7 /* UIScrollView+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFD8213038DE00A787B7 /* UIScrollView+Reactive.swift */; };
 		E03DEFDC21303E9A00A787B7 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFDB21303E9A00A787B7 /* Secret.swift */; };
+		E03DEFDE213041A600A787B7 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFDD213041A600A787B7 /* Injectable.swift */; };
+		E03DEFE02130428500A787B7 /* Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFDF2130428500A787B7 /* Instantiatable.swift */; };
+		E03DEFE2213042DF00A787B7 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFE1213042DF00A787B7 /* Extension.swift */; };
 		E0CE3AF9212E71690091FBA0 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EB6D52212E51E8004910BB /* ReactiveSwift.framework */; };
 		E0CE3AFB212E71690091FBA0 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CE3AFA212E71690091FBA0 /* ReactiveCocoa.framework */; };
 		E0EB6CB6212E4D37004910BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EB6CB5212E4D37004910BB /* AppDelegate.swift */; };
@@ -192,6 +195,9 @@
 		E03DEFD4213031EA00A787B7 /* Pagenation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagenation.swift; sourceTree = "<group>"; };
 		E03DEFD8213038DE00A787B7 /* UIScrollView+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Reactive.swift"; sourceTree = "<group>"; };
 		E03DEFDB21303E9A00A787B7 /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
+		E03DEFDD213041A600A787B7 /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
+		E03DEFDF2130428500A787B7 /* Instantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiatable.swift; sourceTree = "<group>"; };
+		E03DEFE1213042DF00A787B7 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		E0CE3AF7212E6FB50091FBA0 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		E0CE3AFA212E71690091FBA0 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		E0EB6CB2212E4D37004910BB /* Canary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -365,7 +371,6 @@
 		E03DEFCF2130223200A787B7 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				E03DEFDA21303E1E00A787B7 /* UIKit */,
 				E03DEFD7213038C400A787B7 /* Reactive */,
 				E03DEFD6213038B900A787B7 /* DataSources */,
 			);
@@ -386,13 +391,6 @@
 				E03DEFD8213038DE00A787B7 /* UIScrollView+Reactive.swift */,
 			);
 			path = Reactive;
-			sourceTree = "<group>";
-		};
-		E03DEFDA21303E1E00A787B7 /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UIKit;
 			sourceTree = "<group>";
 		};
 		E0EB6CA9212E4D37004910BB = {
@@ -465,8 +463,11 @@
 			isa = PBXGroup;
 			children = (
 				E0EB6D11212E4E77004910BB /* CanaryKit.h */,
+				E03DEFE1213042DF00A787B7 /* Extension.swift */,
 				E0EB6D54212E5209004910BB /* View.swift */,
 				E0CE3AF7212E6FB50091FBA0 /* Store.swift */,
+				E03DEFDD213041A600A787B7 /* Injectable.swift */,
+				E03DEFDF2130428500A787B7 /* Instantiatable.swift */,
 				E03DEFCF2130223200A787B7 /* Extension */,
 				E0EB6D12212E4E77004910BB /* Info.plist */,
 			);
@@ -937,7 +938,10 @@
 			files = (
 				E03DEFD9213038DE00A787B7 /* UIScrollView+Reactive.swift in Sources */,
 				E03DEFD12130227600A787B7 /* ReactiveTableViewDataSource.swift in Sources */,
+				E03DEFE2213042DF00A787B7 /* Extension.swift in Sources */,
+				E03DEFE02130428500A787B7 /* Instantiatable.swift in Sources */,
 				E03DEFC7212FEFF200A787B7 /* View.swift in Sources */,
+				E03DEFDE213041A600A787B7 /* Injectable.swift in Sources */,
 				E03DEFC6212FEFF200A787B7 /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

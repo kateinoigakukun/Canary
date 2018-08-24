@@ -12,8 +12,9 @@ import ReactiveCocoa
 import Result
 import APIModel
 import CanaryKit
+import Repository
 
-class TimelineViewController: UIViewController {
+class TimelineViewController: UIViewController, StoryboardInstantiatable {
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
@@ -21,14 +22,16 @@ class TimelineViewController: UIViewController {
     }
 }
 
-extension TimelineViewController: View {
-    typealias Action = TimelineStore.Action
-    typealias State = TimelineStore.State
+extension TimelineViewController: View, Injectable {
+    typealias Action = TimelineAction
+    typealias State = TimelineState
+    typealias Dependency = Void
 
     enum Section: SectionType {
         typealias Row = Tweet
         case timeline([Tweet])
         var rows: [Tweet] {
+
             switch self {
             case .timeline(let timeline):
                 return timeline
@@ -36,7 +39,9 @@ extension TimelineViewController: View {
         }
     }
 
-    func bind(state: Signal<TimelineStore.State, NoError>) -> Binder<TimelineStore.Action> {
+    func inject(with dependency: Void) {}
+
+    func bind(state: Signal<State, NoError>) -> Binder<Action> {
         let dataSource = ReactiveTableViewDataSource<Section> { tableView, row, indexPath in
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: UITableViewCell.self), for: indexPath)
             cell.textLabel?.text = row.text
@@ -46,10 +51,19 @@ extension TimelineViewController: View {
             [Section.timeline($0.timeline)]
         }
 
-        tableView.reactive.contentOffset
-            .logEvents()
-            .observeResult { _ in }
+        let requestNext = tableView.reactive.reachedBottom.map(value: Action.next)
+            .withLatest(from: state.map(\.isLoading))
+            .throttle(0.4, on: QueueScheduler.main)
+            .filter { !$1 }
+            .map { $0.0 }
 
-        return Binder(action: reactive.viewDidAppear.map(value: Action.reload))
+        return Binder(
+            action: Signal.merge(
+                [
+                    requestNext,
+                    reactive.viewDidAppear.map(value: Action.reload)
+                ]
+            )
+        )
     }
 }

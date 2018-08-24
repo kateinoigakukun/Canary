@@ -12,41 +12,70 @@ import ReactiveSwift
 import Result
 import Repository
 
-class TimelineStore: Store {
+enum TimelineAction {
+    case reload
+    case next
+}
 
-    enum Action {
-        case reload
-        case next
-    }
-    enum Mutation {
-        case setTimeline([Tweet])
-        case addTimeline([Tweet])
-        case setPageToken(TimelinePageToken)
-        case setError(Error)
-    }
+enum TimelineMutation {
+    case setTimeline([Tweet])
+    case addTimeline([Tweet])
+    case setLoading(Bool)
+    case setPageToken(TimelinePageToken)
+    case setError(Error)
+}
 
-    struct State {
-        var timeline: [Tweet]
-        var pageToken: TimelinePageToken
-    }
+struct TimelineState {
+    var timeline: [Tweet]
+    var pageToken: TimelinePageToken
+    var isLoading: Bool
+}
 
-    let repository: PagingReposioty<SinceMaxPaginatedRequest<HomeTimelineRequest>>
-    let initialState: TimelineStore.State = .init(timeline: [], pageToken: .initial)
+class TimelineStore<Request: PagenatedRequest>: Store where Request.Base.PageToken == TimelinePageToken, Request.Base: TimelineRequest {
 
-    init(repository: PagingReposioty<SinceMaxPaginatedRequest<HomeTimelineRequest>>) {
+    typealias Action = TimelineAction
+    typealias Mutation = TimelineMutation
+    typealias State = TimelineState
+
+    let repository: PagingReposioty<Request>
+    let initialState: TimelineStore.State = .init(timeline: [], pageToken: .initial, isLoading: false)
+
+    init(repository: PagingReposioty<Request>) {
         self.repository = repository
     }
 
     func mutate(action: Action, state: State) -> SignalProducer<Mutation, NoError> {
         switch action {
         case .reload:
-            return repository.request(page: .initial)
-                .flatMap(.concat) { SignalProducer([.setPageToken($1), .setTimeline($0)]) }
-                .flatMapError { SignalProducer(value: .setError($0)) }
+            return SignalProducer(value: .setLoading(true)).concat(
+                repository.request(page: .initial)
+                    .take(first: 1)
+                    .flatMap(.concat) {
+                        SignalProducer(
+                            [
+                                .setPageToken($1),
+                                .setTimeline(Request.Base.timeline(from: $0)),
+                                .setLoading(false)
+                            ]
+                        )
+                    }
+                    .flatMapError { SignalProducer(value: .setError($0)) }
+            )
         case .next:
-            return repository.request(page: state.pageToken)
-                .flatMap(.concat) { SignalProducer([.setPageToken($1), .addTimeline($0)]) }
-                .flatMapError { SignalProducer(value: .setError($0)) }
+            return SignalProducer(value: .setLoading(true)).concat(
+                repository.request(page: state.pageToken)
+                    .take(first: 1)
+                    .flatMap(.concat) {
+                        SignalProducer(
+                            [
+                                .setPageToken($1),
+                                .addTimeline(Request.Base.timeline(from: $0)),
+                                .setLoading(false)
+                            ]
+                        )
+                    }
+                    .flatMapError { SignalProducer(value: .setError($0)) }
+            )
         }
     }
 
@@ -57,6 +86,8 @@ class TimelineStore: Store {
             state.timeline = timeline
         case .addTimeline(let timeline):
             state.timeline += timeline
+        case .setLoading(let isLoading):
+            state.isLoading = isLoading
         case .setPageToken(let pageToken):
             state.pageToken = pageToken
         case .setError(let error):
