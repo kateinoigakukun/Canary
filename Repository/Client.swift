@@ -1,0 +1,52 @@
+//
+//  Client.swift
+//  Repository
+//
+//  Created by Yuta Saito on 2018/08/24.
+//  Copyright © 2018年 bangohan. All rights reserved.
+//
+
+import OAuthSwift
+import ReactiveSwift
+
+enum ClientError: Error {
+    case connectionError(Error)
+    case requestError(Error)
+    case responseError(Error)
+}
+
+enum ResponseError: Error {
+    case nonHTTPURLResponse(URLResponse?)
+}
+
+protocol ClientType {
+    func send(_ request: URLRequest) -> SignalProducer<(Data, HTTPURLResponse), ClientError>
+}
+
+extension OAuthSwiftClient: ClientType {
+
+    func send(_ request: URLRequest) -> SignalProducer<(Data, HTTPURLResponse), ClientError> {
+        return SignalProducer { [unowned self] observer, _ in
+            do {
+                let authorizedRequest = try self.makeRequest(request).makeRequest()
+                let session = URLSession(
+                    configuration: self.sessionFactory.configuration,
+                    delegate: self.sessionFactory.delegate,
+                    delegateQueue: self.sessionFactory.queue
+                )
+                session.dataTask(with: authorizedRequest) { (data, response, error) in
+                    switch (data, response, error) {
+                    case (_, _, let error?):
+                        observer.send(error: .connectionError(error))
+                    case (let data?, let urlResponse as HTTPURLResponse, _):
+                        observer.send(value: (data, urlResponse))
+                    default:
+                        observer.send(error: ClientError.responseError(ResponseError.nonHTTPURLResponse(response)))
+                    }
+                }
+            } catch let error {
+                observer.send(error: .requestError(error))
+            }
+        }
+    }
+}

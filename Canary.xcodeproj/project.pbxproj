@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E03DEF49212FB50B00A787B7 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03DEF40212FB50B00A787B7 /* Repository.framework */; };
+		E03DEF50212FB50B00A787B7 /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEF4F212FB50B00A787B7 /* RepositoryTests.swift */; };
+		E03DEF52212FB50B00A787B7 /* Repository.h in Headers */ = {isa = PBXBuildFile; fileRef = E03DEF42212FB50B00A787B7 /* Repository.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E03DEF55212FB50B00A787B7 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03DEF40212FB50B00A787B7 /* Repository.framework */; };
+		E03DEF56212FB50B00A787B7 /* Repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E03DEF40212FB50B00A787B7 /* Repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E03DEF5E212FB52800A787B7 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEF5D212FB52800A787B7 /* Repository.swift */; };
+		E03DEF61212FB6B600A787B7 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03DEF5F212FB6B600A787B7 /* APIKit.framework */; };
+		E03DEF62212FB6B600A787B7 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03DEF60212FB6B600A787B7 /* OAuthSwift.framework */; };
+		E03DEF66212FB7C300A787B7 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEF65212FB7C300A787B7 /* Request.swift */; };
+		E03DEF67212FB83D00A787B7 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EB6D52212E51E8004910BB /* ReactiveSwift.framework */; };
+		E03DEF69212FBF2300A787B7 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEF68212FBF2300A787B7 /* Client.swift */; };
 		E0CE3AF8212E6FB50091FBA0 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CE3AF7212E6FB50091FBA0 /* Store.swift */; };
 		E0CE3AF9212E71690091FBA0 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EB6D52212E51E8004910BB /* ReactiveSwift.framework */; };
 		E0CE3AFB212E71690091FBA0 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CE3AFA212E71690091FBA0 /* ReactiveCocoa.framework */; };
@@ -32,6 +43,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E03DEF4A212FB50B00A787B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0EB6CAA212E4D37004910BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E03DEF3F212FB50B00A787B7;
+			remoteInfo = Repository;
+		};
+		E03DEF4C212FB50B00A787B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0EB6CAA212E4D37004910BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0EB6CB1212E4D37004910BB;
+			remoteInfo = Canary;
+		};
+		E03DEF53212FB50B00A787B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0EB6CAA212E4D37004910BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E03DEF3F212FB50B00A787B7;
+			remoteInfo = Repository;
+		};
 		E0EB6CC7212E4D3A004910BB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E0EB6CAA212E4D37004910BB /* Project object */;
@@ -99,6 +131,7 @@
 			files = (
 				E0EB6D25212E4E78004910BB /* CanaryKit.framework in Embed Frameworks */,
 				E0EB6D48212E4F7E004910BB /* Framework.framework in Embed Frameworks */,
+				E03DEF56212FB50B00A787B7 /* Repository.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +139,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E03DEF40212FB50B00A787B7 /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E03DEF42212FB50B00A787B7 /* Repository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
+		E03DEF43212FB50B00A787B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E03DEF48212FB50B00A787B7 /* RepositoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepositoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E03DEF4F212FB50B00A787B7 /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
+		E03DEF51212FB50B00A787B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E03DEF5D212FB52800A787B7 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		E03DEF5F212FB6B600A787B7 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
+		E03DEF60212FB6B600A787B7 /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuthSwift.framework; path = Carthage/Build/iOS/OAuthSwift.framework; sourceTree = "<group>"; };
+		E03DEF65212FB7C300A787B7 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		E03DEF68212FBF2300A787B7 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		E0CE3AF7212E6FB50091FBA0 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		E0CE3AFA212E71690091FBA0 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		E0EB6CB2212E4D37004910BB /* Canary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,10 +182,29 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E03DEF3D212FB50B00A787B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E03DEF67212FB83D00A787B7 /* ReactiveSwift.framework in Frameworks */,
+				E03DEF61212FB6B600A787B7 /* APIKit.framework in Frameworks */,
+				E03DEF62212FB6B600A787B7 /* OAuthSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E03DEF45212FB50B00A787B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E03DEF49212FB50B00A787B7 /* Repository.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E0EB6CAF212E4D37004910BB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E03DEF55212FB50B00A787B7 /* Repository.framework in Frameworks */,
 				E0CE3AFB212E71690091FBA0 /* ReactiveCocoa.framework in Frameworks */,
 				E0CE3AF9212E71690091FBA0 /* ReactiveSwift.framework in Frameworks */,
 				E0EB6D24212E4E78004910BB /* CanaryKit.framework in Frameworks */,
@@ -197,6 +260,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E03DEF41212FB50B00A787B7 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				E03DEF42212FB50B00A787B7 /* Repository.h */,
+				E03DEF5D212FB52800A787B7 /* Repository.swift */,
+				E03DEF65212FB7C300A787B7 /* Request.swift */,
+				E03DEF68212FBF2300A787B7 /* Client.swift */,
+				E03DEF43212FB50B00A787B7 /* Info.plist */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		E03DEF4E212FB50B00A787B7 /* RepositoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				E03DEF4F212FB50B00A787B7 /* RepositoryTests.swift */,
+				E03DEF51212FB50B00A787B7 /* Info.plist */,
+			);
+			path = RepositoryTests;
+			sourceTree = "<group>";
+		};
 		E0EB6CA9212E4D37004910BB = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +291,8 @@
 				E0EB6D1D212E4E78004910BB /* CanaryKitTests */,
 				E0EB6D33212E4F7D004910BB /* Framework */,
 				E0EB6D40212E4F7E004910BB /* FrameworkTests */,
+				E03DEF41212FB50B00A787B7 /* Repository */,
+				E03DEF4E212FB50B00A787B7 /* RepositoryTests */,
 				E0EB6CB3212E4D37004910BB /* Products */,
 				E0EB6D51212E51E8004910BB /* Frameworks */,
 			);
@@ -222,6 +308,8 @@
 				E0EB6D17212E4E77004910BB /* CanaryKitTests.xctest */,
 				E0EB6D32212E4F7D004910BB /* Framework.framework */,
 				E0EB6D3A212E4F7D004910BB /* FrameworkTests.xctest */,
+				E03DEF40212FB50B00A787B7 /* Repository.framework */,
+				E03DEF48212FB50B00A787B7 /* RepositoryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -298,6 +386,8 @@
 		E0EB6D51212E51E8004910BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E03DEF5F212FB6B600A787B7 /* APIKit.framework */,
+				E03DEF60212FB6B600A787B7 /* OAuthSwift.framework */,
 				E0CE3AFA212E71690091FBA0 /* ReactiveCocoa.framework */,
 				E0EB6D52212E51E8004910BB /* ReactiveSwift.framework */,
 			);
@@ -307,6 +397,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		E03DEF3B212FB50B00A787B7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E03DEF52212FB50B00A787B7 /* Repository.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E0EB6D0A212E4E77004910BB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -326,6 +424,43 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		E03DEF3F212FB50B00A787B7 /* Repository */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E03DEF5B212FB50B00A787B7 /* Build configuration list for PBXNativeTarget "Repository" */;
+			buildPhases = (
+				E03DEF3B212FB50B00A787B7 /* Headers */,
+				E03DEF3C212FB50B00A787B7 /* Sources */,
+				E03DEF3D212FB50B00A787B7 /* Frameworks */,
+				E03DEF3E212FB50B00A787B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Repository;
+			productName = Repository;
+			productReference = E03DEF40212FB50B00A787B7 /* Repository.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E03DEF47212FB50B00A787B7 /* RepositoryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E03DEF5C212FB50B00A787B7 /* Build configuration list for PBXNativeTarget "RepositoryTests" */;
+			buildPhases = (
+				E03DEF44212FB50B00A787B7 /* Sources */,
+				E03DEF45212FB50B00A787B7 /* Frameworks */,
+				E03DEF46212FB50B00A787B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E03DEF4B212FB50B00A787B7 /* PBXTargetDependency */,
+				E03DEF4D212FB50B00A787B7 /* PBXTargetDependency */,
+			);
+			name = RepositoryTests;
+			productName = RepositoryTests;
+			productReference = E03DEF48212FB50B00A787B7 /* RepositoryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E0EB6CB1212E4D37004910BB /* Canary */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E0EB6CDA212E4D3A004910BB /* Build configuration list for PBXNativeTarget "Canary" */;
@@ -341,6 +476,7 @@
 			dependencies = (
 				E0EB6D23212E4E78004910BB /* PBXTargetDependency */,
 				E0EB6D46212E4F7E004910BB /* PBXTargetDependency */,
+				E03DEF54212FB50B00A787B7 /* PBXTargetDependency */,
 			);
 			name = Canary;
 			productName = Canary;
@@ -467,6 +603,14 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = bangohan;
 				TargetAttributes = {
+					E03DEF3F212FB50B00A787B7 = {
+						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
+					};
+					E03DEF47212FB50B00A787B7 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = E0EB6CB1212E4D37004910BB;
+					};
 					E0EB6CB1212E4D37004910BB = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -515,11 +659,27 @@
 				E0EB6D16212E4E77004910BB /* CanaryKitTests */,
 				E0EB6D31212E4F7D004910BB /* Framework */,
 				E0EB6D39212E4F7D004910BB /* FrameworkTests */,
+				E03DEF3F212FB50B00A787B7 /* Repository */,
+				E03DEF47212FB50B00A787B7 /* RepositoryTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E03DEF3E212FB50B00A787B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E03DEF46212FB50B00A787B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E0EB6CB0212E4D37004910BB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -599,6 +759,24 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E03DEF3C212FB50B00A787B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E03DEF5E212FB52800A787B7 /* Repository.swift in Sources */,
+				E03DEF66212FB7C300A787B7 /* Request.swift in Sources */,
+				E03DEF69212FBF2300A787B7 /* Client.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E03DEF44212FB50B00A787B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E03DEF50212FB50B00A787B7 /* RepositoryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E0EB6CAE212E4D37004910BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -659,6 +837,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E03DEF4B212FB50B00A787B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E03DEF3F212FB50B00A787B7 /* Repository */;
+			targetProxy = E03DEF4A212FB50B00A787B7 /* PBXContainerItemProxy */;
+		};
+		E03DEF4D212FB50B00A787B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0EB6CB1212E4D37004910BB /* Canary */;
+			targetProxy = E03DEF4C212FB50B00A787B7 /* PBXContainerItemProxy */;
+		};
+		E03DEF54212FB50B00A787B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E03DEF3F212FB50B00A787B7 /* Repository */;
+			targetProxy = E03DEF53212FB50B00A787B7 /* PBXContainerItemProxy */;
+		};
 		E0EB6CC8212E4D3A004910BB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E0EB6CB1212E4D37004910BB /* Canary */;
@@ -721,6 +914,113 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E03DEF57212FB50B00A787B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = K677BRB35L;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Repository/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bangohan.Repository;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E03DEF58212FB50B00A787B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = K677BRB35L;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Repository/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bangohan.Repository;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E03DEF59212FB50B00A787B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K677BRB35L;
+				INFOPLIST_FILE = RepositoryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bangohan.RepositoryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Canary.app/Canary";
+			};
+			name = Debug;
+		};
+		E03DEF5A212FB50B00A787B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K677BRB35L;
+				INFOPLIST_FILE = RepositoryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bangohan.RepositoryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Canary.app/Canary";
+			};
+			name = Release;
+		};
 		E0EB6CD8212E4D3A004910BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1171,6 +1471,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E03DEF5B212FB50B00A787B7 /* Build configuration list for PBXNativeTarget "Repository" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E03DEF57212FB50B00A787B7 /* Debug */,
+				E03DEF58212FB50B00A787B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E03DEF5C212FB50B00A787B7 /* Build configuration list for PBXNativeTarget "RepositoryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E03DEF59212FB50B00A787B7 /* Debug */,
+				E03DEF5A212FB50B00A787B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E0EB6CAD212E4D37004910BB /* Build configuration list for PBXProject "Canary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
