@@ -25,7 +25,7 @@ enum TimelineMutation {
     case setError(Error)
 }
 
-struct TimelineState {
+struct TimelineState: Codable {
     var timeline: [Tweet]
     var pageToken: TimelinePageToken
     var isLoading: Bool

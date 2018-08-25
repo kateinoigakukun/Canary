@@ -22,7 +22,7 @@ class TimelineViewController: UIViewController, StoryboardInstantiatable {
     }
 }
 
-extension TimelineViewController: View, Injectable {
+extension TimelineViewController: View, Injectable, Debuggable {
     typealias Action = TimelineAction
     typealias State = TimelineState
     typealias Dependency = Void

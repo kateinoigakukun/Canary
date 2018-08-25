@@ -25,7 +25,6 @@ extension PagenatableRequest where Response: RandomAccessCollection, Response.El
     }
 }
 
-
 public protocol PagenatedRequest: DelegatedRequest where Base: PagenatableRequest {
 
     init(base: Base, page: Base.PageToken)

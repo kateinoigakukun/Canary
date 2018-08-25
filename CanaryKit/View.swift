@@ -14,12 +14,15 @@ public protocol View {
     associatedtype State
 
     func bind(state: Signal<State, NoError>) -> Binder<Action>
-    func inject<S: Store>(store: S) -> Disposable? where S.Action == Action, S.State == State
+    func inject<S: Store>(store: S) -> Disposable where S.Action == Action, S.State == State
 }
 
 extension View where Self: UIViewController {
 
-    public func inject<S: Store>(store: S) -> Disposable? where S.Action == Action, S.State == State {
+    public func inject<S: Store>(store: S) -> Disposable where S.Action == Action, S.State == State {
+        return _inject(store: store).1
+    }
+    func _inject<S: Store>(store: S) -> (Signal<State, NoError>, Disposable) where S.Action == Action, S.State == State {
         // FIXME
         _ = view
         let (stateOutput, stateInput) = Signal<State, NoError>.pipe()
@@ -33,7 +36,15 @@ extension View where Self: UIViewController {
             .observe(stateInput)
 
         stateInput.send(value: store.initialState)
-        return CompositeDisposable([disposable, binder.disposable])
+        return (stateOutput, CompositeDisposable([disposable, binder.disposable]))
+    }
+}
+
+extension View where Self: UIViewController, Self: Debuggable, State: Codable {
+    public func inject<S: Store>(store: S) -> Disposable where S.Action == Action, S.State == State {
+        let (state, disposable) = _inject(store: store)
+        hookShake(state: state)
+        return disposable
     }
 }
 

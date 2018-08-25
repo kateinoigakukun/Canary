@@ -20,9 +20,9 @@ extension DelegatedRequest {
     public var path: String { return delegate.path }
     public var method: HTTPMethod { return delegate.method }
     public var parameters: Any? { return delegate.parameters }
-    public var queryParameters: [String : Any]? { return delegate.queryParameters }
+    public var queryParameters: [String: Any]? { return delegate.queryParameters }
     public var bodyParameters: BodyParameters? { return delegate.bodyParameters }
-    public var headerFields: [String : String] { return delegate.headerFields }
+    public var headerFields: [String: String] { return delegate.headerFields }
     public var dataParser: DataParser { return delegate.dataParser }
 
     public func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Base.Response {

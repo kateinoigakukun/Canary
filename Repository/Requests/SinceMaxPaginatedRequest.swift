@@ -13,7 +13,7 @@ import APIKit
 public final class SinceMaxPaginatedRequest<Base: PagenatableRequest>: PagenatedRequest where Base.PageToken == TimelinePageToken {
     public typealias Error = Base.Error
 
-    public var queryParameters: [String : Any]? {
+    public var queryParameters: [String: Any]? {
         switch pageToken {
         case .initial, .tail:
             return delegate.queryParameters
@@ -29,4 +29,3 @@ public final class SinceMaxPaginatedRequest<Base: PagenatableRequest>: Pagenated
         self.pageToken = page
     }
 }
-

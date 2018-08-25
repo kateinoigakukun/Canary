@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Tweet: Decodable, Identifiable {
+public struct Tweet: Codable, Identifiable {
     public let id: Int
     public let text: String
 }

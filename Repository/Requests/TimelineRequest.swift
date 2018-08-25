@@ -9,10 +9,45 @@
 import APIKit
 import APIModel
 
-public enum TimelinePageToken {
+public enum TimelinePageToken: Codable {
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        switch try container.decode(Kind.self, forKey: .kind) {
+        case .initial:
+            self = .initial
+        case .tail:
+            self = .tail
+        case .hasNext:
+            self = try .hasNext(container.decode(Tweet.ID.self, forKey: .value))
+        }
+    }
+
+    enum CodingKeys: CodingKey {
+        case kind
+        case value
+    }
+
+    enum Kind: String, Codable {
+        case initial, tail, hasNext
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        switch self {
+        case .initial:
+            try container.encode(Kind.initial, forKey: .kind)
+        case .tail:
+            try container.encode(Kind.tail, forKey: .kind)
+        case .hasNext(let id):
+            try container.encode(Kind.hasNext, forKey: .kind)
+            try container.encode(id, forKey: .value)
+        }
+    }
+
     case initial
     case hasNext(Tweet.ID)
     case tail
+
 }
 
 public protocol TimelineRequest: PagenatableRequest {
@@ -43,7 +78,7 @@ public struct UserTimelineRequest: PagenatableRequest, TimelineRequest {
 
     public let path: String = "statuses/user_timeline.json"
     public let method: HTTPMethod = .get
-    public let queryParameters: [String : Any]?
+    public let queryParameters: [String: Any]?
 
     public init(userId: Int) {
         queryParameters = [
@@ -67,7 +102,7 @@ public struct SearchRequest: PagenatableRequest, TimelineRequest {
 
     public let path: String = "search/tweets.json"
     public let method: HTTPMethod = .get
-    public let queryParameters: [String : Any]?
+    public let queryParameters: [String: Any]?
 
     public init(query: String) {
         queryParameters = [

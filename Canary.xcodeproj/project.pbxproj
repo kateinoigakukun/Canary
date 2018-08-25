@@ -44,6 +44,7 @@
 		E03DEFDE213041A600A787B7 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFDD213041A600A787B7 /* Injectable.swift */; };
 		E03DEFE02130428500A787B7 /* Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFDF2130428500A787B7 /* Instantiatable.swift */; };
 		E03DEFE2213042DF00A787B7 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFE1213042DF00A787B7 /* Extension.swift */; };
+		E0B40C792130E9CA00996ECF /* Debuggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B40C782130E9CA00996ECF /* Debuggable.swift */; };
 		E0CE3AF9212E71690091FBA0 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EB6D52212E51E8004910BB /* ReactiveSwift.framework */; };
 		E0CE3AFB212E71690091FBA0 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CE3AFA212E71690091FBA0 /* ReactiveCocoa.framework */; };
 		E0EB6CB6212E4D37004910BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EB6CB5212E4D37004910BB /* AppDelegate.swift */; };
@@ -198,6 +199,7 @@
 		E03DEFDD213041A600A787B7 /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
 		E03DEFDF2130428500A787B7 /* Instantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiatable.swift; sourceTree = "<group>"; };
 		E03DEFE1213042DF00A787B7 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		E0B40C782130E9CA00996ECF /* Debuggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debuggable.swift; sourceTree = "<group>"; };
 		E0CE3AF7212E6FB50091FBA0 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		E0CE3AFA212E71690091FBA0 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		E0EB6CB2212E4D37004910BB /* Canary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -466,6 +468,7 @@
 				E03DEFE1213042DF00A787B7 /* Extension.swift */,
 				E0EB6D54212E5209004910BB /* View.swift */,
 				E0CE3AF7212E6FB50091FBA0 /* Store.swift */,
+				E0B40C782130E9CA00996ECF /* Debuggable.swift */,
 				E03DEFDD213041A600A787B7 /* Injectable.swift */,
 				E03DEFDF2130428500A787B7 /* Instantiatable.swift */,
 				E03DEFCF2130223200A787B7 /* Extension */,
@@ -603,6 +606,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E0EB6CDA212E4D3A004910BB /* Build configuration list for PBXNativeTarget "Canary" */;
 			buildPhases = (
+				E03DEFE42130E34800A787B7 /* Swiftlint */,
+				E03DEFE52130E37D00A787B7 /* IBLinter */,
 				E0EB6CAE212E4D37004910BB /* Sources */,
 				E0EB6CAF212E4D37004910BB /* Frameworks */,
 				E0EB6CB0212E4D37004910BB /* Resources */,
@@ -837,6 +842,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		E03DEFE42130E34800A787B7 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/SwiftLint/swiftlint\"\n\n";
+		};
+		E03DEFE52130E37D00A787B7 /* IBLinter */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = IBLinter;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/IBLinter/bin/iblinter\"\n";
+		};
 		E0CE3AFC212E754F0091FBA0 /* Copy Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -941,6 +982,7 @@
 				E03DEFE2213042DF00A787B7 /* Extension.swift in Sources */,
 				E03DEFE02130428500A787B7 /* Instantiatable.swift in Sources */,
 				E03DEFC7212FEFF200A787B7 /* View.swift in Sources */,
+				E0B40C792130E9CA00996ECF /* Debuggable.swift in Sources */,
 				E03DEFDE213041A600A787B7 /* Injectable.swift in Sources */,
 				E03DEFC6212FEFF200A787B7 /* Store.swift in Sources */,
 			);
@@ -1057,6 +1099,7 @@
 				);
 				INFOPLIST_FILE = Repository/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1091,6 +1134,7 @@
 				);
 				INFOPLIST_FILE = Repository/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1168,6 +1212,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = APIModel/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1198,6 +1243,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = APIModel/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1381,6 +1427,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Canary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1404,6 +1451,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Canary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1514,6 +1562,7 @@
 				);
 				INFOPLIST_FILE = CanaryKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1546,6 +1595,7 @@
 				);
 				INFOPLIST_FILE = CanaryKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

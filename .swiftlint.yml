@@ -1,0 +1,19 @@
+disabled_rules:
+  - force_cast
+  - line_length
+  - large_tuple
+  - comma
+  - opening_brace
+  - identifier_name
+  - nesting
+  - type_name
+  - function_body_length
+  - force_try
+  - weak_delegate
+
+opt_in_rules:
+  - explicit_init
+excluded:
+  - Carthage
+  - vendor
+  - .iblinter-tmp

@@ -31,7 +31,6 @@ class ViewController: UIViewController {
         _ = inject(store: SampleStore())
     }
 
-
 }
 
 extension ViewController: View {
@@ -56,20 +55,20 @@ extension ViewController: View {
                 oauthTokenSecret: Secret.shared.oauthTokenSecret,
                 version: .oauth1
             )
-//            let store = TimelineStore(
-//                repository: PagingReposioty<SinceMaxPaginatedRequest>(
-//                    initialRequest: UserTimeLineRequest(
-//                        screenName: "OY_A_Official"
-//                    ),
-//                    client: client
-//                )
-//            )
             let store = TimelineStore(
                 repository: PagingReposioty<SinceMaxPaginatedRequest>(
-                    initialRequest: SearchRequest(query: "iOSDC"),
+                    initialRequest: UserTimelineRequest(
+                        screenName: "OY_A_Official"
+                    ),
                     client: client
                 )
             )
+//            let store = TimelineStore(
+//                repository: PagingReposioty<SinceMaxPaginatedRequest>(
+//                    initialRequest: SearchRequest(query: "iOSDC"),
+//                    client: client
+//                )
+//            )
 
             _ = vc.inject(store: store)
             self.navigationController?.pushViewController(vc, animated: true)
