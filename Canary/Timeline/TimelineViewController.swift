@@ -51,11 +51,12 @@ extension TimelineViewController: View, Injectable, Debuggable {
             [Section.timeline($0.timeline)]
         }
 
-        let requestNext = tableView.reactive.reachedBottom.map(value: Action.next)
+        let requestNext = tableView.reactive.reachedBottom
+            .map(value: Action.next)
             .withLatest(from: state.map(\.isLoading))
-            .throttle(0.4, on: QueueScheduler.main)
             .filter { !$1 }
             .map { $0.0 }
+            .throttle(0.4, on: QueueScheduler.main)
 
         return Binder(
             action: Signal.merge(

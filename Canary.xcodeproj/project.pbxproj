@@ -44,6 +44,8 @@
 		E03DEFDE213041A600A787B7 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFDD213041A600A787B7 /* Injectable.swift */; };
 		E03DEFE02130428500A787B7 /* Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFDF2130428500A787B7 /* Instantiatable.swift */; };
 		E03DEFE2213042DF00A787B7 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03DEFE1213042DF00A787B7 /* Extension.swift */; };
+		E05B01392132F22600F13117 /* DebugPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05B01382132F22600F13117 /* DebugPlugin.swift */; };
+		E05B013B2132FD4F00F13117 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05B013A2132FD4F00F13117 /* Either.swift */; };
 		E0B40C792130E9CA00996ECF /* Debuggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B40C782130E9CA00996ECF /* Debuggable.swift */; };
 		E0CE3AF9212E71690091FBA0 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EB6D52212E51E8004910BB /* ReactiveSwift.framework */; };
 		E0CE3AFB212E71690091FBA0 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CE3AFA212E71690091FBA0 /* ReactiveCocoa.framework */; };
@@ -199,6 +201,8 @@
 		E03DEFDD213041A600A787B7 /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
 		E03DEFDF2130428500A787B7 /* Instantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiatable.swift; sourceTree = "<group>"; };
 		E03DEFE1213042DF00A787B7 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		E05B01382132F22600F13117 /* DebugPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPlugin.swift; sourceTree = "<group>"; };
+		E05B013A2132FD4F00F13117 /* Either.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Either.swift; sourceTree = "<group>"; };
 		E0B40C782130E9CA00996ECF /* Debuggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debuggable.swift; sourceTree = "<group>"; };
 		E0CE3AF7212E6FB50091FBA0 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		E0CE3AFA212E71690091FBA0 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
@@ -395,6 +399,15 @@
 			path = Reactive;
 			sourceTree = "<group>";
 		};
+		E05B01352132F16A00F13117 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				E0B40C782130E9CA00996ECF /* Debuggable.swift */,
+				E05B01382132F22600F13117 /* DebugPlugin.swift */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
 		E0EB6CA9212E4D37004910BB = {
 			isa = PBXGroup;
 			children = (
@@ -468,9 +481,10 @@
 				E03DEFE1213042DF00A787B7 /* Extension.swift */,
 				E0EB6D54212E5209004910BB /* View.swift */,
 				E0CE3AF7212E6FB50091FBA0 /* Store.swift */,
-				E0B40C782130E9CA00996ECF /* Debuggable.swift */,
+				E05B013A2132FD4F00F13117 /* Either.swift */,
 				E03DEFDD213041A600A787B7 /* Injectable.swift */,
 				E03DEFDF2130428500A787B7 /* Instantiatable.swift */,
+				E05B01352132F16A00F13117 /* Debug */,
 				E03DEFCF2130223200A787B7 /* Extension */,
 				E0EB6D12212E4E77004910BB /* Info.plist */,
 			);
@@ -981,8 +995,10 @@
 				E03DEFD12130227600A787B7 /* ReactiveTableViewDataSource.swift in Sources */,
 				E03DEFE2213042DF00A787B7 /* Extension.swift in Sources */,
 				E03DEFE02130428500A787B7 /* Instantiatable.swift in Sources */,
+				E05B013B2132FD4F00F13117 /* Either.swift in Sources */,
 				E03DEFC7212FEFF200A787B7 /* View.swift in Sources */,
 				E0B40C792130E9CA00996ECF /* Debuggable.swift in Sources */,
+				E05B01392132F22600F13117 /* DebugPlugin.swift in Sources */,
 				E03DEFDE213041A600A787B7 /* Injectable.swift in Sources */,
 				E03DEFC6212FEFF200A787B7 /* Store.swift in Sources */,
 			);

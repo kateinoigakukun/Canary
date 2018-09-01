@@ -25,13 +25,21 @@ extension View where Self: UIViewController {
     func _inject<S: Store>(store: S) -> (Signal<State, NoError>, Disposable) where S.Action == Action, S.State == State {
         // FIXME
         _ = view
+
         let (stateOutput, stateInput) = Signal<State, NoError>.pipe()
+
         let binder = bind(state: stateOutput)
-        let disposable = binder.action.withLatest(from: stateOutput)
-            .flatMap(.concurrent(limit: 10)) { (action, state)in
-                return store.mutate(action: action, state: state)
-            }
+        let disposable = binder.action
             .withLatest(from: stateOutput)
+            .flatMap(.concat) { action, state -> SignalProducer<(Action, State), NoError> in
+                return SignalProducer(value: (action, state))
+            }
+            .flatMap(.concurrent(limit: 10)) { (action, state)in
+                store.mutate(action: action, state: state).map { ($0, state) }
+            }
+            .flatMap(.concat) { mutation, state -> SignalProducer<(S.Mutation, State), NoError> in
+                return SignalProducer(value: (mutation, state))
+            }
             .map { store.reduce(mutation: $0.0, state: $0.1) }
             .observe(stateInput)
 
@@ -57,3 +65,18 @@ public struct Binder<Action> {
         self.disposable = disposable
     }
 }
+
+protocol Inputtable {
+    associatedtype Input
+
+    func input(with input: Input)
+}
+
+protocol Outputtable {
+    associatedtype Output
+    associatedtype State
+
+    func output(state: Signal<State, NoError>) -> Signal<Output, NoError>
+}
+
+typealias IOble = Inputtable & Outputtable
