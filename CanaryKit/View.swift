@@ -14,32 +14,31 @@ public protocol View {
     associatedtype State
 
     func bind(state: Signal<State, NoError>) -> Binder<Action>
-    func inject<S: Store>(store: S) -> Disposable where S.Action == Action, S.State == State
+    func inject<S: Store>(store: S, mapState transformer: @escaping (S.State) -> State?) -> (Signal<S.State, NoError>, Disposable) where S.Action == Action
 }
 
 extension View where Self: UIViewController {
 
-    public func inject<S: Store>(store: S) -> Disposable where S.Action == Action, S.State == State {
-        return _inject(store: store).1
+    public func inject<S: Store>(store: S, mapState transformer: @escaping (S.State) -> State?) -> (Signal<S.State, NoError>, Disposable) where S.Action == Action {
+        return _inject(store: store, mapState: transformer)
     }
-    func _inject<S: Store>(store: S) -> (Signal<State, NoError>, Disposable) where S.Action == Action, S.State == State {
+
+    public func inject<S: Store>(store: S) -> (Signal<S.State, NoError>, Disposable) where S.Action == Action, S.State == State {
+        return _inject(store: store, mapState: { $0 })
+    }
+
+    func _inject<S: Store>(store: S, mapState transformer: @escaping (S.State) -> State?) -> (Signal<S.State, NoError>, Disposable) where S.Action == Action {
         // FIXME
         _ = view
 
-        let (stateOutput, stateInput) = Signal<State, NoError>.pipe()
+        let (stateOutput, stateInput) = Signal<S.State, NoError>.pipe()
 
-        let binder = bind(state: stateOutput)
-        let disposable = binder.action
+        let binder = bind(state: stateOutput.filterMap { transformer($0) })
+        let disposable = binder.action.withLatest(from: stateOutput)
+            .flatMap(.concurrent(limit: 10)) { (action, state) in
+                store.mutate(action: action, state: state)
+            }
             .withLatest(from: stateOutput)
-            .flatMap(.concat) { action, state -> SignalProducer<(Action, State), NoError> in
-                return SignalProducer(value: (action, state))
-            }
-            .flatMap(.concurrent(limit: 10)) { (action, state)in
-                store.mutate(action: action, state: state).map { ($0, state) }
-            }
-            .flatMap(.concat) { mutation, state -> SignalProducer<(S.Mutation, State), NoError> in
-                return SignalProducer(value: (mutation, state))
-            }
             .map { store.reduce(mutation: $0.0, state: $0.1) }
             .observe(stateInput)
 
@@ -49,10 +48,10 @@ extension View where Self: UIViewController {
 }
 
 extension View where Self: UIViewController, Self: Debuggable, State: Codable {
-    public func inject<S: Store>(store: S) -> Disposable where S.Action == Action, S.State == State {
-        let (state, disposable) = _inject(store: store)
+    public func inject<S: Store>(store: S, mapState transformer: @escaping (S.State) -> State) -> (Signal<State, NoError>, Disposable) where S.Action == Action, S.State == State {
+        let (state, disposable) = _inject(store: store, mapState: transformer)
         hookShake(state: state)
-        return disposable
+        return (state, disposable)
     }
 }
 
@@ -65,18 +64,3 @@ public struct Binder<Action> {
         self.disposable = disposable
     }
 }
-
-protocol Inputtable {
-    associatedtype Input
-
-    func input(with input: Input)
-}
-
-protocol Outputtable {
-    associatedtype Output
-    associatedtype State
-
-    func output(state: Signal<State, NoError>) -> Signal<Output, NoError>
-}
-
-typealias IOble = Inputtable & Outputtable

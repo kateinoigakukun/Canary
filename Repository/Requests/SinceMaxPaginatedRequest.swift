@@ -16,16 +16,16 @@ public final class SinceMaxPaginatedRequest<Base: PagenatableRequest>: Pagenated
     public var queryParameters: [String: Any]? {
         switch pageToken {
         case .initial, .tail:
-            return delegate.queryParameters
+            return base.queryParameters
         case .hasNext(let id):
-            return delegate.queryParameters?.merging(["max_id": id], uniquingKeysWith: { $1 })
+            return base.queryParameters?.merging(["max_id": id], uniquingKeysWith: { $1 })
         }
     }
 
     public let pageToken: Base.PageToken
-    public let delegate: Base
+    public let base: Base
     public init(base: Base, page: Base.PageToken) {
-        self.delegate = base
+        self.base = base
         self.pageToken = page
     }
 }

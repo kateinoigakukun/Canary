@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="187" id="SJL-fV-5X6" customClass="TimelineCell" customModule="Canary" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="187"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SJL-fV-5X6" id="K80-2Z-dVy">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="186.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eaq-dj-PaN">
+                        <rect key="frame" x="8" y="8" width="359" height="170.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="eaq-dj-PaN" secondAttribute="trailing" constant="8" id="P6j-fT-wZc"/>
+                    <constraint firstAttribute="bottom" secondItem="eaq-dj-PaN" secondAttribute="bottom" constant="8" id="Sm2-B7-QsS"/>
+                    <constraint firstItem="eaq-dj-PaN" firstAttribute="top" secondItem="K80-2Z-dVy" secondAttribute="top" constant="8" id="g99-mz-rkO"/>
+                    <constraint firstItem="eaq-dj-PaN" firstAttribute="leading" secondItem="K80-2Z-dVy" secondAttribute="leading" constant="8" id="lYh-mY-2Un"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.98039215690000003" green="0.2666666667" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="textView" destination="eaq-dj-PaN" id="gbE-uK-ly1"/>
+            </connections>
+            <point key="canvasLocation" x="53.600000000000001" y="112.89355322338831"/>
+        </tableViewCell>
+    </objects>
+</document>

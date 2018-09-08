@@ -46,32 +46,38 @@ extension ViewController: View {
             }
         }
 
-        button.reactive.controlEvents(.touchUpInside).observeValues { [unowned self] _ in
-            let vc = TimelineViewController.canary.instantiate()
-            let client = OAuthSwiftClient(
-                consumerKey: Secret.shared.consumerKey,
-                consumerSecret: Secret.shared.consumerSecret,
-                oauthToken: Secret.shared.oauthToken,
-                oauthTokenSecret: Secret.shared.oauthTokenSecret,
-                version: .oauth1
-            )
-            let store = TimelineStore(
-                repository: PagingReposioty<SinceMaxPaginatedRequest>(
-                    initialRequest: UserTimelineRequest(
-                        screenName: "OY_A_Official"
-                    ),
-                    client: client
+        button.reactive.controlEvents(.touchUpInside)
+            .flatMap(.concat) { [unowned self] _ in
+                let client = OAuthSwiftClient(
+                    consumerKey: Secret.shared.consumerKey,
+                    consumerSecret: Secret.shared.consumerSecret,
+                    oauthToken: Secret.shared.oauthToken,
+                    oauthTokenSecret: Secret.shared.oauthTokenSecret,
+                    version: .oauth1
                 )
-            )
-//            let store = TimelineStore(
-//                repository: PagingReposioty<SinceMaxPaginatedRequest>(
-//                    initialRequest: SearchRequest(query: "iOSDC"),
-//                    client: client
-//                )
-//            )
-
-            _ = vc.inject(store: store)
-            self.navigationController?.pushViewController(vc, animated: true)
+                //            let vc = TimelineViewController()
+                //            let store = TimelineStore(
+                //                repository: PagingReposioty<SinceMaxPaginatedRequest>(
+                //                    initialRequest: UserTimelineRequest(
+                //                        screenName: "OY_A_Official"
+                //                    ),
+                //                    client: client
+                //                )
+                //            )
+                //            let store = TimelineStore(
+                //                repository: PagingReposioty<SinceMaxPaginatedRequest>(
+                //                    initialRequest: SearchRequest(query: "iOSDC"),
+                //                    client: client
+                //                )
+                //            )
+                
+                let vc = APIStatusViewController()
+                let store = APIStatusStore(repository: APIRepository(client: client))
+                
+                return self.canary.present(vc, animated: true, store: store)
+            }
+            .observeValues { (state: APIStatusState) in
+                print(state)
         }
 
         return Binder<Action>(

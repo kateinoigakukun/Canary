@@ -14,57 +14,37 @@ import APIModel
 import CanaryKit
 import Repository
 
-class TimelineViewController: UIViewController, StoryboardInstantiatable {
-    @IBOutlet weak var tableView: UITableView!
+class TimelineViewController: UIViewController, XibInstantiatable {
+    @IBOutlet private weak var tableView: UITableView!
 
-    override func viewDidLoad() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: String(describing: UITableViewCell.self))
+    lazy var timelineCellToken = self.tableView.canary.register(forNib: TimelineCell.self)
+
+    convenience init() {
+        self.init(nibName: type(of: self).xibName, bundle: nil)
     }
 }
 
-extension TimelineViewController: View, Injectable, Debuggable {
+extension TimelineViewController: View, Injectable {
     typealias Action = TimelineAction
     typealias State = TimelineState
     typealias Dependency = Void
 
-    enum Section: SectionType {
-        typealias Row = Tweet
-        case timeline([Tweet])
-        var rows: [Tweet] {
-
-            switch self {
-            case .timeline(let timeline):
-                return timeline
-            }
-        }
-    }
-
     func inject(with dependency: Void) {}
 
     func bind(state: Signal<State, NoError>) -> Binder<Action> {
-        let dataSource = ReactiveTableViewDataSource<Section> { tableView, row, indexPath in
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: UITableViewCell.self), for: indexPath)
-            cell.textLabel?.text = row.text
+        let dataSource = ReactiveTableViewDataSource<State.Section> { [timelineCellToken] tableView, row, indexPath in
+            let cell = timelineCellToken.dequeue(in: tableView, for: indexPath, dependency: row)
             return cell
         }
-        tableView.reactive.items(dataSource: dataSource) <~ state.map {
-            [Section.timeline($0.timeline)]
-        }
-
+        tableView.reactive.items(dataSource: dataSource) <~ state.map(\.sections)
         let requestNext = tableView.reactive.reachedBottom
-            .map(value: Action.next)
             .withLatest(from: state.map(\.isLoading))
             .filter { !$1 }
             .map { $0.0 }
             .throttle(0.4, on: QueueScheduler.main)
+            .map(value: Action.next)
+        let reload = reactive.viewDidAppear.map(value: Action.reload)
 
-        return Binder(
-            action: Signal.merge(
-                [
-                    requestNext,
-                    reactive.viewDidAppear.map(value: Action.reload)
-                ]
-            )
-        )
+        return Binder(action: .merge([requestNext, reload]))
     }
 }

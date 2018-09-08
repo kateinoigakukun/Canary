@@ -11,9 +11,7 @@ import ReactiveCocoa
 import Result
 import UIKit
 
-public protocol Debuggable: View where Self: UIResponder {
-    func plugins<P>() -> [P]
-}
+public protocol Debuggable: View where Self: UIResponder {}
 
 extension Debuggable where Self: UIViewController, Self.State: Codable {
     func hookShake(state: Signal<Self.State, NoError>) {
@@ -22,22 +20,10 @@ extension Debuggable where Self: UIViewController, Self.State: Codable {
         debugResponder.reactive.becomeFirstResponder <~ reactive.viewDidAppear
         debugResponder.motionBegan
             .withLatest(from: state).map { $1 }
-            .observeValues { [unowned self] state in
+            .observeValues { state in
                 let encoder = JSONEncoder()
                 let data = try! encoder.encode(state)
-                print(String(data: data, encoding: .utf8))
-                let vc = UIViewController()
-                vc.view.backgroundColor = .red
-                let nav = UINavigationController(rootViewController: vc)
-                let closeButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: nil)
-                let closeAction = ReactiveSwift.Action<Void, Void, NoError>(execute: { (_) -> SignalProducer<Void, NoError> in
-                    nav.dismiss(animated: true)
-                    return SignalProducer.empty
-                })
-                closeButton.reactive.pressed = CocoaAction(closeAction)
-                self.present(nav, animated: true) {
-                    vc.navigationItem.leftBarButtonItem = closeButton
-                }
+                print(String(data: data, encoding: .utf8)!)
         }
     }
 }
@@ -61,15 +47,3 @@ final class DebugDummyResponder: UIView {
         motionBeganInput.send(value: ())
     }
 }
-
-final class DebugDashboardViewController<S: Store>: UIViewController {}
-
-//extension DebugDashboardViewController: View {
-//
-//    typealias Action = S.Action
-//    typealias State = S.State
-//
-//    func bind(state: Signal<S.State, NoError>) -> Binder<S.Action> {
-//        fatalError()
-//    }
-//}

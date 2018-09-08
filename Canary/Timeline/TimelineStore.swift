@@ -29,6 +29,21 @@ struct TimelineState: Codable {
     var timeline: [Tweet]
     var pageToken: TimelinePageToken
     var isLoading: Bool
+
+    var sections: [Section] {
+         return [.timeline(timeline)]
+    }
+
+    enum Section: SectionType {
+        typealias Row = Tweet
+        case timeline([Tweet])
+        var rows: [Tweet] {
+            switch self {
+            case .timeline(let timeline):
+                return timeline
+            }
+        }
+    }
 }
 
 class TimelineStore<Request: PagenatedRequest>: Store where Request.Base.PageToken == TimelinePageToken, Request.Base: TimelineRequest {

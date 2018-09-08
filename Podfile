@@ -20,7 +20,7 @@ target 'Canary' do
   use_frameworks!
 
   # Pods for Canary
-  pod 'IBLinter'
+  pod 'IBLinter', '0.4.2'
   pod 'SwiftLint'
 
   target 'CanaryTests' do

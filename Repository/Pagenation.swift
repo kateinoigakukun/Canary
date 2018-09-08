@@ -25,7 +25,7 @@ extension PagenatableRequest where Response: RandomAccessCollection, Response.El
     }
 }
 
-public protocol PagenatedRequest: DelegatedRequest where Base: PagenatableRequest {
+public protocol PagenatedRequest: RequestProxy where Base: PagenatableRequest {
 
     init(base: Base, page: Base.PageToken)
 
@@ -34,7 +34,7 @@ public protocol PagenatedRequest: DelegatedRequest where Base: PagenatableReques
 
 extension PagenatedRequest {
     public func nextToken(for response: Response) -> Base.PageToken {
-        return delegate.nextToken(for: response)
+        return base.nextToken(for: response)
     }
 }
 

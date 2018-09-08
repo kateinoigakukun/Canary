@@ -53,14 +53,14 @@ public extension RepositoryType {
                         }
                     }
                 }
-                .flatMap(.concat, { (passedObject, urlResponse) -> SignalProducer<R.Response, CanaryRequestError<R.Error>> in
+                .flatMap(.concat) { (passedObject, urlResponse) -> SignalProducer<R.Response, CanaryRequestError<R.Error>> in
                     do {
                         let response = try request.response(from: passedObject, urlResponse: urlResponse)
                         return SignalProducer(value: response)
                     } catch {
                         return SignalProducer(error: .unexpectedError(error))
                     }
-                })
+                }
         } catch {
             return SignalProducer(error: .requestError(error))
         }
