@@ -9,6 +9,7 @@
 import UIKit
 import ReactiveSwift
 import ReactiveCocoa
+import Result
 
 public protocol SectionType {
     associatedtype Row
@@ -16,7 +17,7 @@ public protocol SectionType {
 }
 
 extension Reactive where Base: UITableView {
-    public func items<S>(dataSource: ReactiveTableViewDataSource<S>) -> BindingTarget<[S]> {
+    public func items<S, State>(dataSource: ReactiveTableViewDataSource<S, State>) -> BindingTarget<[S]> {
         base.dataSource = dataSource
         return makeBindingTarget { base, sections in
             dataSource.setSections(sections)
@@ -25,15 +26,19 @@ extension Reactive where Base: UITableView {
     }
 }
 
-public final class ReactiveTableViewDataSource<Section: SectionType>: NSObject, UITableViewDataSource {
+public final class ReactiveTableViewDataSource<Section: SectionType, State>: NSObject, UITableViewDataSource {
 
-    public typealias ConfigureCell = (UITableView, Section.Row, IndexPath) -> UITableViewCell
+    public typealias ConfigureCell = (UITableView, Section.Row, IndexPath) -> CellProxy<State>
     private var _sectionModels: [Section] = []
 
     private let configureCell: ConfigureCell
 
+    public let state: Signal<State, NoError>
+    private let stateInput: Signal<State, NoError>.Observer
+
     public init(configureCell: @escaping ConfigureCell) {
         self.configureCell = configureCell
+        (self.state, self.stateInput) = Signal.pipe()
     }
 
     func setSections(_ section: [Section]) {
@@ -45,6 +50,13 @@ public final class ReactiveTableViewDataSource<Section: SectionType>: NSObject, 
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return configureCell(tableView, _sectionModels[indexPath.section].rows[indexPath.row], indexPath)
+        let proxy = configureCell(tableView, _sectionModels[indexPath.section].rows[indexPath.row], indexPath)
+        let cell = proxy.cell
+        let disposeEvent = [cell.reactive.prepareForReuse, cell.reactive.lifetime.ended.map(value: ())]
+        Signal.merge(disposeEvent).observeCompleted { proxy.dispose() }
+        proxy.state.take(until: cell.reactive.prepareForReuse).observeValues { [weak self] in
+            self?.stateInput.send(value: $0)
+        }
+        return cell
     }
 }

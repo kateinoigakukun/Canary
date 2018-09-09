@@ -25,19 +25,27 @@ enum TimelineMutation {
     case setError(Error)
 }
 
-struct TimelineState: Codable {
+struct TimelineState {
     var timeline: [Tweet]
     var pageToken: TimelinePageToken
     var isLoading: Bool
+    let repository: APIRepositoryType
 
     var sections: [Section] {
-         return [.timeline(timeline)]
+        return [.timeline(timeline.map { Section.Row(tweet: $0, repository: repository) })]
     }
 
     enum Section: SectionType {
-        typealias Row = Tweet
-        case timeline([Tweet])
-        var rows: [Tweet] {
+        struct Row {
+            let tweet: Tweet
+            let repository: APIRepositoryType
+            var store: TimelineCellStore {
+                return TimelineCellStore(tweet: tweet, repository: repository)
+            }
+        }
+
+        case timeline([Row])
+        var rows: [Row] {
             switch self {
             case .timeline(let timeline):
                 return timeline
@@ -53,10 +61,11 @@ class TimelineStore<Request: PagenatedRequest>: Store where Request.Base.PageTok
     typealias State = TimelineState
 
     let repository: PagingReposioty<Request>
-    let initialState: TimelineStore.State = .init(timeline: [], pageToken: .initial, isLoading: false)
+    let initialState: TimelineStore.State
 
-    init(repository: PagingReposioty<Request>) {
+    init(repository: PagingReposioty<Request>, apiRepository: APIRepositoryType) {
         self.repository = repository
+        initialState = .init(timeline: [], pageToken: .initial, isLoading: false, repository: apiRepository)
     }
 
     func mutate(action: Action, state: State) -> SignalProducer<Mutation, NoError> {

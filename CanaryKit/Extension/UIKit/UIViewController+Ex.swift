@@ -28,6 +28,13 @@ extension Canary where Base: UIViewController {
                 .on(terminated: { disposable.dispose() })
     }
 
+    public func present<V, S>(_ viewControllerToPresent: V, animated flag: Bool, store: S) where
+        V: UIViewController, V: View, S: Store,
+        V.State == S.State, V.Action == S.Action {
+            _ = viewControllerToPresent.inject(store: store)
+            base.present(viewControllerToPresent, animated: flag)
+    }
+
     public func dismiss(animated flag: Bool) -> SignalProducer<Void, NoError> {
         let (output, input) = Signal<Void, NoError>.pipe()
 

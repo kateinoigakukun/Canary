@@ -52,6 +52,8 @@
 		E06762002143CF1300FA2129 /* APIRateLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06761FF2143CF1300FA2129 /* APIRateLimit.swift */; };
 		E06762042143E04D00FA2129 /* APIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06762032143E04D00FA2129 /* APIRepository.swift */; };
 		E06762062143F05E00FA2129 /* TimelineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E06762052143F05E00FA2129 /* TimelineViewController.xib */; };
+		E06762082144015200FA2129 /* TimelineCellStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06762072144015200FA2129 /* TimelineCellStore.swift */; };
+		E067620C214403C100FA2129 /* FavoriteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E067620B214403C100FA2129 /* FavoriteRequest.swift */; };
 		E06A451F213E8DF2001B71F5 /* TimelineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E06A451E213E8DF2001B71F5 /* TimelineCell.xib */; };
 		E09F7967213E7156005683D1 /* LoginStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F7966213E7156005683D1 /* LoginStore.swift */; };
 		E09F796A213E7954005683D1 /* UITableView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F7969213E7954005683D1 /* UITableView+Ex.swift */; };
@@ -219,6 +221,8 @@
 		E06761FF2143CF1300FA2129 /* APIRateLimit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRateLimit.swift; sourceTree = "<group>"; };
 		E06762032143E04D00FA2129 /* APIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRepository.swift; sourceTree = "<group>"; };
 		E06762052143F05E00FA2129 /* TimelineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineViewController.xib; sourceTree = "<group>"; };
+		E06762072144015200FA2129 /* TimelineCellStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCellStore.swift; sourceTree = "<group>"; };
+		E067620B214403C100FA2129 /* FavoriteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRequest.swift; sourceTree = "<group>"; };
 		E06A451E213E8DF2001B71F5 /* TimelineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineCell.xib; sourceTree = "<group>"; };
 		E09F7966213E7156005683D1 /* LoginStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStore.swift; sourceTree = "<group>"; };
 		E09F7969213E7954005683D1 /* UITableView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ex.swift"; sourceTree = "<group>"; };
@@ -383,6 +387,7 @@
 				E03DEFB4212FDDDF00A787B7 /* TimelineRequest.swift */,
 				E03DEFCB212FF27800A787B7 /* SinceMaxPaginatedRequest.swift */,
 				E06761FD2143CE1700FA2129 /* ApplicationRequest.swift */,
+				E067620B214403C100FA2129 /* FavoriteRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -393,6 +398,7 @@
 				E03DEFC2212FEEEC00A787B7 /* TimelineViewController.swift */,
 				E06762052143F05E00FA2129 /* TimelineViewController.xib */,
 				E09F796B213E7C6C005683D1 /* TimelineCell.swift */,
+				E06762072144015200FA2129 /* TimelineCellStore.swift */,
 				E06A451E213E8DF2001B71F5 /* TimelineCell.xib */,
 				E03DEFC9212FF08A00A787B7 /* TimelineStore.swift */,
 			);
@@ -985,6 +991,7 @@
 				E03DEF5E212FB52800A787B7 /* Repository.swift in Sources */,
 				E03DEF66212FB7C300A787B7 /* Request.swift in Sources */,
 				E03DEF69212FBF2300A787B7 /* Client.swift in Sources */,
+				E067620C214403C100FA2129 /* FavoriteRequest.swift in Sources */,
 				E03DEFD5213031EA00A787B7 /* Pagenation.swift in Sources */,
 				E06762042143E04D00FA2129 /* APIRepository.swift in Sources */,
 			);
@@ -1030,6 +1037,7 @@
 				E06761FC2143CC6A00FA2129 /* APIStatusStore.swift in Sources */,
 				E06761F82143C94F00FA2129 /* APIStatusViewController.swift in Sources */,
 				E03DEFCA212FF08A00A787B7 /* TimelineStore.swift in Sources */,
+				E06762082144015200FA2129 /* TimelineCellStore.swift in Sources */,
 				E03DEFC3212FEEEC00A787B7 /* TimelineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

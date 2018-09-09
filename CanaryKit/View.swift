@@ -17,7 +17,7 @@ public protocol View {
     func inject<S: Store>(store: S, mapState transformer: @escaping (S.State) -> State?) -> (Signal<S.State, NoError>, Disposable) where S.Action == Action
 }
 
-extension View where Self: UIViewController {
+extension View {
 
     public func inject<S: Store>(store: S, mapState transformer: @escaping (S.State) -> State?) -> (Signal<S.State, NoError>, Disposable) where S.Action == Action {
         return _inject(store: store, mapState: transformer)
@@ -28,8 +28,10 @@ extension View where Self: UIViewController {
     }
 
     func _inject<S: Store>(store: S, mapState transformer: @escaping (S.State) -> State?) -> (Signal<S.State, NoError>, Disposable) where S.Action == Action {
-        // FIXME
-        _ = view
+        if let vc = self as? UIViewController {
+            // FIXME
+            _ = vc.view
+        }
 
         let (stateOutput, stateInput) = Signal<S.State, NoError>.pipe()
 

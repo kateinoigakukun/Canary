@@ -33,13 +33,35 @@ public struct RegisteredCellToken<Cell: UITableViewCell> {
     let cellReuseIdentifier: String
 }
 
-extension RegisteredCellToken where Cell: Injectable {
+extension RegisteredCellToken where Cell: View {
 
-    public func dequeue(in tableView: UITableView,
-                        for indexPath: IndexPath,
-                        dependency: Cell.Dependency) -> Cell {
+    public func dequeue<S: Store>(in tableView: UITableView,
+                                  for indexPath: IndexPath,
+                                  store: S) -> CellProxy<S.State>
+        where S.Action == Cell.Action, S.State == Cell.State
+    {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! Cell
-        cell.inject(with: dependency)
-        return cell
+        let (state, disposable) = cell.inject(store: store)
+        let proxy = CellProxy<S.State>(cell: cell, state: state, disposable: disposable)
+        return proxy
+    }
+}
+
+import Result
+import ReactiveSwift
+
+public struct CellProxy<State> {
+    unowned let cell: UITableViewCell
+    let disposable: Disposable
+    let state: Signal<State, NoError>
+
+    init(cell: UITableViewCell, state: Signal<State, NoError>, disposable: Disposable) {
+        self.cell = cell
+        self.disposable = disposable
+        self.state = state
+    }
+
+    func dispose() {
+        disposable.dispose()
     }
 }

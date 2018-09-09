@@ -32,7 +32,7 @@ class LoginStore: OutputStore {
     typealias Mutation = LoginMutation
     typealias PureState = LoginState
     typealias Output = UserToken
-    typealias State = ResultState<PureState, Output>
+    typealias State = OutputState<PureState, Output>
 
     let initialState: State = .state(.idle)
 

@@ -6,7 +6,7 @@
 //  Copyright © 2018年 bangohan. All rights reserved.
 //
 
-public enum ResultState<State, Result> {
+public enum OutputState<State, Result> {
     case state(State)
     case result(Result)
 
@@ -25,7 +25,7 @@ public enum ResultState<State, Result> {
     }
 }
 
-public protocol OutputStore: Store where State == ResultState<PureState, Output> {
+public protocol OutputStore: Store where State == OutputState<PureState, Output> {
     associatedtype PureState
     associatedtype Output
 

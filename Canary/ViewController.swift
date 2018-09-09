@@ -55,26 +55,29 @@ extension ViewController: View {
                     oauthTokenSecret: Secret.shared.oauthTokenSecret,
                     version: .oauth1
                 )
-                //            let vc = TimelineViewController()
-                //            let store = TimelineStore(
-                //                repository: PagingReposioty<SinceMaxPaginatedRequest>(
-                //                    initialRequest: UserTimelineRequest(
-                //                        screenName: "OY_A_Official"
-                //                    ),
-                //                    client: client
-                //                )
-                //            )
+                let vc = TimelineViewController()
+                let store = TimelineStore(
+                    repository: PagingReposioty<SinceMaxPaginatedRequest>(
+                        initialRequest: UserTimelineRequest(
+                            screenName: "OY_A_Official"
+                        ),
+                        client: client
+                    ),
+                    apiRepository: APIRepository(client: client)
+                )
                 //            let store = TimelineStore(
                 //                repository: PagingReposioty<SinceMaxPaginatedRequest>(
                 //                    initialRequest: SearchRequest(query: "iOSDC"),
                 //                    client: client
                 //                )
                 //            )
-                
-                let vc = APIStatusViewController()
-                let store = APIStatusStore(repository: APIRepository(client: client))
-                
-                return self.canary.present(vc, animated: true, store: store)
+
+//                let vc = APIStatusViewController()
+//                let store = APIStatusStore(repository: APIRepository(client: client))
+                _ = vc.inject(store: store)
+                self.navigationController?.pushViewController(vc, animated: true)
+//                self.canary.present(vc, animated: true, store: store)
+                return SignalProducer.empty
             }
             .observeValues { (state: APIStatusState) in
                 print(state)

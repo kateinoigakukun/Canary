@@ -32,9 +32,9 @@ extension TimelineViewController: View, Injectable {
     func inject(with dependency: Void) {}
 
     func bind(state: Signal<State, NoError>) -> Binder<Action> {
-        let dataSource = ReactiveTableViewDataSource<State.Section> { [timelineCellToken] tableView, row, indexPath in
-            let cell = timelineCellToken.dequeue(in: tableView, for: indexPath, dependency: row)
-            return cell
+        let dataSource = ReactiveTableViewDataSource<State.Section, Tweet> { [timelineCellToken] tableView, row, indexPath in
+            let cellProxy = timelineCellToken.dequeue(in: tableView, for: indexPath, store: row.store)
+            return cellProxy
         }
         tableView.reactive.items(dataSource: dataSource) <~ state.map(\.sections)
         let requestNext = tableView.reactive.reachedBottom

@@ -31,7 +31,7 @@ class APIStatusStore: OutputStore {
     typealias Mutation = APIStatusMutation
     typealias PureState = APIStatusState
     typealias Output = APIStatusState
-    typealias State = ResultState<PureState, Output>
+    typealias State = OutputState<PureState, Output>
 
     let initialState: State = .state(.init())
     let repository: APIRepositoryType

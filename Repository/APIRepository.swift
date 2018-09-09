@@ -13,6 +13,7 @@ public protocol APIRepositoryType: RepositoryType {
     typealias RepositoryError = CanaryRequestError<APIError>
 
     func rateLimit() -> SignalProducer<APIRateLimit, RepositoryError>
+    func like(for tweet: Tweet) -> SignalProducer<Tweet, RepositoryError>
 }
 
 public class APIRepository: APIRepositoryType {
@@ -25,5 +26,8 @@ public class APIRepository: APIRepositoryType {
 
     public func rateLimit() -> SignalProducer<APIRateLimit, RepositoryError> {
         return self.send(RateLimitStatusRequest())
+    }
+    public func like(for tweet: Tweet) -> SignalProducer<Tweet, RepositoryError> {
+        return send(FavoriteRequest(id: tweet.id))
     }
 }
